@@ -11,6 +11,7 @@ FunFacts/ 是 TreeHouse Android 教程的第一篇(Build a Simple Android App)�
 只有一个界面, 就一个按钮和一些文字
 进入 APP 之后，点击按钮，告诉你有趣的冷知识
 (文字变了, 背景颜色变了)
+<img src="ImageForREADME.MD/1.jpg" width="48">
 ![1](ImageForREADME.MD/1.jpg)
 ![1](ImageForREADME.MD/2.jpg)
 ![1](ImageForREADME.MD/3.jpg)
