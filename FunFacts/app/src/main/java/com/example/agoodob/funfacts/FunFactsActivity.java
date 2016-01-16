@@ -41,11 +41,6 @@ public class FunFactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_facts);
 
-        // 1. TextView xxx 声明好一个变量用于待会存
-        // 2. findViewById 找到对应的元素然后赋值给 xxx
-        // 3. new 一个 OnClickListener 变量, 比如赋值到 listner 里
-        // 4. xxx.setOnClickListener(listener)  像这样把 listener 传到 setOnClickListener 里
-
         mFactTextView = (TextView) findViewById(R.id.faceTextView);
         mShowFactButton = (Button) findViewById(R.id.button);
         rl = (RelativeLayout) findViewById(R.id.RLayout);
@@ -59,20 +54,12 @@ public class FunFactsActivity extends AppCompatActivity {
                 mFactTextView.setText(fact);
                 rl.setBackgroundColor(color);
                 mShowFactButton.setTextColor(color);
-
-                
             }
         };
         mShowFactButton.setOnClickListener(listener);
-
-        // Toast 显示一段时间后会自动消失，不是常驻的
-//        Toast.makeText(FunFactsActivity.this, "白开水", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "We are login??");
-        
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+
 
     @Override
     public void onStart() {
