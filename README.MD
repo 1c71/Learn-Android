@@ -3,7 +3,7 @@
 
 #### 环境:
 
-    Windows 10
+    Windows 10 x64
     Android Studio 1.5.1
     Sumsung Note 5 真机调试 (Android 5.1)
 
@@ -11,11 +11,11 @@
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 进入 APP 后，点击按钮，切换不同的有趣的冷知识. 下面是真机测试截图<br/>
-<img src="ImageForREADME.MD/1.jpg" width="293">
-<img src="ImageForREADME.MD/2.jpg" width="293">
-<img src="ImageForREADME.MD/3.jpg" width="293">
-<img src="ImageForREADME.MD/4.jpg" width="293">
-<img src="ImageForREADME.MD/5.jpg" width="293">
+<img src="zImage.MD/1.jpg" width="293">
+<img src="zImage.MD/2.jpg" width="293">
+<img src="zImage.MD/3.jpg" width="293">
+<img src="zImage.MD/4.jpg" width="293">
+<img src="zImage.MD/5.jpg" width="293">
 
 讲了:
 
@@ -29,17 +29,17 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     Toast是什么
 <!--
 因为是第一篇所以很简单，只有一个界面<br/>
-<img src="ImageForREADME.MD/1.png" width="293">
+<img src="zImage.MD/1.png" width="293">
 
 实现原理其实就是点击按钮，随机选一个冷知识，随机选一个颜色  <br/>
 在把随机选出来的冷知识和颜色设置到界面上去  <br/>
-<img src="ImageForREADME.MD/2.png" width="293">
+<img src="zImage.MD/2.png" width="293">
 
 随机选冷知识的 class<br/>
-<img src="ImageForREADME.MD/4.png" width="293">
+<img src="zImage.MD/4.png" width="293">
 
 随机选颜色的 class<br/>
-<img src="ImageForREADME.MD/3.png" width="293"> -->
+<img src="zImage.MD/3.png" width="293"> -->
 
 
 
@@ -48,21 +48,21 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 课程名:《Build an Interactive Story App》  <br/>
 
 官方的设计稿: <br/>
-<img src="ImageForREADME.MD/interactive_story_mockups.png">
+<img src="zImage.MD/interactive_story_mockups.png">
 
 玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
 真机测试的截图(我汉化了下)<br/>
-<img src="ImageForREADME.MD/21.jpg" width="293">
-<img src="ImageForREADME.MD/22.jpg" width="293">
-<img src="ImageForREADME.MD/23.jpg" width="293">
-<img src="ImageForREADME.MD/24.jpg" width="293">
-<img src="ImageForREADME.MD/25.jpg" width="293">
-<img src="ImageForREADME.MD/26.jpg" width="293">
-<img src="ImageForREADME.MD/27.jpg" width="293">
-<img src="ImageForREADME.MD/28.jpg" width="293">
-<img src="ImageForREADME.MD/29.jpg" width="293">
-<!-- <img src="ImageForREADME.MD/211.png" width="293">
-<img src="ImageForREADME.MD/212.png" width="293"> -->
+<img src="zImage.MD/21.jpg" width="293">
+<img src="zImage.MD/22.jpg" width="293">
+<img src="zImage.MD/23.jpg" width="293">
+<img src="zImage.MD/24.jpg" width="293">
+<img src="zImage.MD/25.jpg" width="293">
+<img src="zImage.MD/26.jpg" width="293">
+<img src="zImage.MD/27.jpg" width="293">
+<img src="zImage.MD/28.jpg" width="293">
+<img src="zImage.MD/29.jpg" width="293">
+<!-- <img src="zImage.MD/211.png" width="293">
+<img src="zImage.MD/212.png" width="293"> -->
 
 
 这个课是第 2 篇, 用了 2 个 Activity,  <br/>
