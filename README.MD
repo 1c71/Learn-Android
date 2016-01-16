@@ -1,8 +1,6 @@
 ### 这里存放我学安卓的代码
 学习资料来源: 目前只是在看 Treehouse 的安卓教程
 
-<br/>
-
 #### 环境:
 
     Windows 10
@@ -31,17 +29,17 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     Toast是什么
 
 因为是第一篇所以很简单，只有一个界面<br/>
-<img src="ImageForREADME.MD/1.png">
+<img src="ImageForREADME.MD/1.png" width="293">
 
 实现原理其实就是点击按钮，随机选一个冷知识，随机选一个颜色  <br/>
 在把随机选出来的冷知识和颜色设置到界面上去  <br/>
-<img src="ImageForREADME.MD/2.png">
+<img src="ImageForREADME.MD/2.png" width="293">
 
 随机选冷知识的 class<br/>
-<img src="ImageForREADME.MD/4.png">
+<img src="ImageForREADME.MD/4.png" width="293">
 
 随机选颜色的 class<br/>
-<img src="ImageForREADME.MD/3.png">
+<img src="ImageForREADME.MD/3.png" width="293">
 
 
 
@@ -54,17 +52,17 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 其实玩法就是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
 下面是做出来后真机测试的截图(我汉化了下)<br/>
-<img src="ImageForREADME.MD/21.png">
-<img src="ImageForREADME.MD/22.png">
-<img src="ImageForREADME.MD/23.png">
-<img src="ImageForREADME.MD/24.png">
-<img src="ImageForREADME.MD/25.png">
-<img src="ImageForREADME.MD/26.png">
-<img src="ImageForREADME.MD/27.png">
-<img src="ImageForREADME.MD/28.png">
-<img src="ImageForREADME.MD/29.png">
-<img src="ImageForREADME.MD/211.png">
-<img src="ImageForREADME.MD/212.png">
+<img src="ImageForREADME.MD/21.jpg" width="293">
+<img src="ImageForREADME.MD/22.jpg" width="293">
+<img src="ImageForREADME.MD/23.jpg" width="293">
+<img src="ImageForREADME.MD/24.jpg" width="293">
+<img src="ImageForREADME.MD/25.jpg" width="293">
+<img src="ImageForREADME.MD/26.jpg" width="293">
+<img src="ImageForREADME.MD/27.jpg" width="293">
+<img src="ImageForREADME.MD/28.jpg" width="293">
+<img src="ImageForREADME.MD/29.jpg" width="293">
+<img src="ImageForREADME.MD/211.png" width="293">
+<img src="ImageForREADME.MD/212.png" width="293">
 
 
 这个课是第 2 篇, 用了 2 个 Activity,  <br/>
