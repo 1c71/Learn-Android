@@ -1,5 +1,8 @@
 ### 这里存放我学安卓的代码
-学习资料来源: 目前只是在看 Treehouse 的安卓教程
+
+#### 学习资料来源
+
+    Treehouse 的安卓教程
 
 #### 环境:
 
@@ -11,11 +14,11 @@
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 进入 APP 后，点击按钮，切换不同的有趣的冷知识. 下面是真机测试截图<br/>
-<img src="zImage.MD/1.jpg" width="293">
-<img src="zImage.MD/2.jpg" width="293">
-<img src="zImage.MD/3.jpg" width="293">
-<img src="zImage.MD/4.jpg" width="293">
-<img src="zImage.MD/5.jpg" width="293">
+<img src="zImage/1.jpg" width="293">
+<img src="zImage/2.jpg" width="293">
+<img src="zImage/3.jpg" width="293">
+<img src="zImage/4.jpg" width="293">
+<img src="zImage/5.jpg" width="293">
 
 讲了:
 
@@ -27,20 +30,6 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     OnClickListener事件监听,
     Random 生成随机数,
     Toast是什么
-<!--
-因为是第一篇所以很简单，只有一个界面<br/>
-<img src="zImage.MD/1.png" width="293">
-
-实现原理其实就是点击按钮，随机选一个冷知识，随机选一个颜色  <br/>
-在把随机选出来的冷知识和颜色设置到界面上去  <br/>
-<img src="zImage.MD/2.png" width="293">
-
-随机选冷知识的 class<br/>
-<img src="zImage.MD/4.png" width="293">
-
-随机选颜色的 class<br/>
-<img src="zImage.MD/3.png" width="293"> -->
-
 
 
 <br/>
@@ -48,21 +37,19 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 课程名:《Build an Interactive Story App》  <br/>
 
 官方的设计稿: <br/>
-<img src="zImage.MD/interactive_story_mockups.png">
+<img src="zImage/interactive_story_mockups.png">
 
 玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
 真机测试的截图(我汉化了下)<br/>
-<img src="zImage.MD/21.jpg" width="293">
-<img src="zImage.MD/22.jpg" width="293">
-<img src="zImage.MD/23.jpg" width="293">
-<img src="zImage.MD/24.jpg" width="293">
-<img src="zImage.MD/25.jpg" width="293">
-<img src="zImage.MD/26.jpg" width="293">
-<img src="zImage.MD/27.jpg" width="293">
-<img src="zImage.MD/28.jpg" width="293">
-<img src="zImage.MD/29.jpg" width="293">
-<!-- <img src="zImage.MD/211.png" width="293">
-<img src="zImage.MD/212.png" width="293"> -->
+<img src="zImage/21.jpg" width="293">
+<img src="zImage/22.jpg" width="293">
+<img src="zImage/23.jpg" width="293">
+<img src="zImage/24.jpg" width="293">
+<img src="zImage/25.jpg" width="293">
+<img src="zImage/26.jpg" width="293">
+<img src="zImage/27.jpg" width="293">
+<img src="zImage/28.jpg" width="293">
+<img src="zImage/29.jpg" width="293">
 
 
 这个课是第 2 篇, 用了 2 个 Activity,  <br/>
