@@ -10,7 +10,7 @@
 ### Fun Facts (有趣冷知识)
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
-进入 APP 后，点击按钮，切换不同的有趣的冷知识. 下面是做出来后真机测试的截图<br/>
+进入 APP 后，点击按钮，切换不同的有趣的冷知识. 下面是真机测试截图<br/>
 <img src="ImageForREADME.MD/1.jpg" width="293">
 <img src="ImageForREADME.MD/2.jpg" width="293">
 <img src="ImageForREADME.MD/3.jpg" width="293">
@@ -27,7 +27,7 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     OnClickListener事件监听,
     Random 生成随机数,
     Toast是什么
-
+<!--
 因为是第一篇所以很简单，只有一个界面<br/>
 <img src="ImageForREADME.MD/1.png" width="293">
 
@@ -39,7 +39,7 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 <img src="ImageForREADME.MD/4.png" width="293">
 
 随机选颜色的 class<br/>
-<img src="ImageForREADME.MD/3.png" width="293">
+<img src="ImageForREADME.MD/3.png" width="293"> -->
 
 
 
@@ -47,11 +47,11 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 ### Interactive Story (飞船故事)
 课程名:《Build an Interactive Story App》  <br/>
 
-这个是官方的设计稿<br/>
+官方的设计稿: <br/>
 <img src="ImageForREADME.MD/interactive_story_mockups.png">
 
-其实玩法就是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
-下面是做出来后真机测试的截图(我汉化了下)<br/>
+玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
+真机测试的截图(我汉化了下)<br/>
 <img src="ImageForREADME.MD/21.jpg" width="293">
 <img src="ImageForREADME.MD/22.jpg" width="293">
 <img src="ImageForREADME.MD/23.jpg" width="293">
@@ -61,8 +61,8 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 <img src="ImageForREADME.MD/27.jpg" width="293">
 <img src="ImageForREADME.MD/28.jpg" width="293">
 <img src="ImageForREADME.MD/29.jpg" width="293">
-<img src="ImageForREADME.MD/211.png" width="293">
-<img src="ImageForREADME.MD/212.png" width="293">
+<!-- <img src="ImageForREADME.MD/211.png" width="293">
+<img src="ImageForREADME.MD/212.png" width="293"> -->
 
 
 这个课是第 2 篇, 用了 2 个 Activity,  <br/>
@@ -76,27 +76,21 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 
 
-
+<br/>
 ### Stormy (天气信息)
 课程名: Build a Weather App
 
 
-
+<br/>
 ### 改进 Stormy  - 用列表显示数据
 课程名: Android Lists and Adapters
 
 
 
-
+<br/>
 ### Android Activity Lifecycle
 
 
-
-
-
-
-
-### 重了个点
 
 
 
