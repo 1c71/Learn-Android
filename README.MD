@@ -67,6 +67,24 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 ### Stormy (天气信息)
 课程名: Build a Weather App
 
+<img src="zImage/31.jpg" width="293">
+<img src="zImage/32.jpg" width="293">
+
+讲了:
+
+    什么是 API
+    UI 线程, 后台线程
+    第三方库 OkHttp
+    系统弹窗怎么做  AlertDialogFragment extends DialogFragment
+    JSON 解析  JSONObject
+    SimpleDataFormat 处理时间戳
+    layout:weight  比例
+    gravity  对齐
+    第三方库 ButterKnife @Bind
+    runOnUiThread(new Runnable() { .... })
+
+
+
 
 <br/>
 ### 改进 Stormy  - 用列表显示数据
