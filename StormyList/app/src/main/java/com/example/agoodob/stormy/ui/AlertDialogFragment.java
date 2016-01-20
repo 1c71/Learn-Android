@@ -1,10 +1,12 @@
-package com.example.agoodob.stormy;
+package com.example.agoodob.stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.example.agoodob.stormy.R;
 
 /**
  * Created by agoodob on 2016/1/16.

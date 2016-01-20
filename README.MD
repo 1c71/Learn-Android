@@ -92,6 +92,16 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 
 
+
+
+讲了:
+
+    Adapter 的简单应用和自定义 Adapter
+    implements Parcelable
+
+
+
+
 <br/>
 ### Android Activity Lifecycle
 
