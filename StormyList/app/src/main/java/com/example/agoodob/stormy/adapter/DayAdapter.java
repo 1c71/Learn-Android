@@ -39,7 +39,7 @@ public class DayAdapter extends BaseAdapter{
         return 0; // we aren't going to use this. Tag items for easy reference
     }
 
-    // ==================================================================================
+    // ============= 每次列表需要显示新元素的时候会调用这个函数 ===============
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
@@ -60,7 +60,13 @@ public class DayAdapter extends BaseAdapter{
         Day day = mDays[position];
         holder.iconImageView.setImageResource(day.getIconId());
         holder.temperatureLabel.setText(day.getTemperature() + "");
-        holder.dayLabel.setText(day.getDayofTheWeek());
+
+        if (position == 0){
+            holder.dayLabel.setText("Today");
+        } else {
+            holder.dayLabel.setText(day.getDayofTheWeek());
+        }
+
         return convertView;
     }
 

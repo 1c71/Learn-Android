@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
 
     private Forecast mForecast;
 
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch (IOException e) {
                         Log.e(TAG, "Exception!!!!!", e);
                     } catch (JSONException e){
-                        Log.e(TAG, "JSON Exception!!!!!", e);
+                        Log.e(TAG, "JSON Exception!!!11!!", e);
                     }
 
                 }
@@ -200,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
             day.setSummary(jsonDay.getString("summary"));
             day.setIcon(jsonDay.getString("icon"));
-            day.setTemperature(jsonDay.getDouble("temperature"));
+            day.setTemperature(jsonDay.getDouble("temperatureMax"));
             day.setTime(jsonDay.getLong("time"));
             day.setTimezone(timezone);
 
@@ -220,8 +221,8 @@ public class MainActivity extends AppCompatActivity {
             JSONObject jsonHour = data.getJSONObject(i);
             Hour hour = new Hour();
 
-            hour.setSummary(jsonHour.getString("Summary"));
-            hour.setTemperatureMax(jsonHour.getDouble("Teamperature"));
+            hour.setSummary(jsonHour.getString("summary"));
+            hour.setTemperatureMax(jsonHour.getDouble("temperature"));
             hour.setIcon(jsonHour.getString("icon"));
             hour.setTime(jsonHour.getLong("time"));
             hour.setTimezone(timezone);
@@ -278,5 +279,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    @OnClick (R.id.hourlyButton)
+    public void startHourlyActivity(View view) {
+        Intent intent = new Intent(this, HourlyForecastActivity.class);
+        intent.putExtra(HOURLY_FORECAST, mForecast.getHourlyForecast());
+        startActivity(intent);
+    }
 }
