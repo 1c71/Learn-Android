@@ -18,8 +18,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.Random;
 
 public class FunFactsActivity extends AppCompatActivity {
-    // Declear our View variables
+
     private static final String TAG = FunFactsActivity.class.getSimpleName();
+    private static final String KEY_FACT = "KEY_FACT";
+    private static final String KEY_COLOR = "KEY_COLOR";
     // 与其写死 FunfactsActitivy, 写成一个字符串 "FunfactActivity"
     // 我们可以让它跟着 类名变
     // 重构工具会认得这个名字
@@ -29,11 +31,8 @@ public class FunFactsActivity extends AppCompatActivity {
     private TextView mFactTextView;
     private Button mShowFactButton;
     private RelativeLayout rl;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient mClient;
+    private String mFact;
+    private int mColor;
 
 
     @Override
@@ -49,56 +48,35 @@ public class FunFactsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                String fact = mFactBook.getFact();
-                int color = mColorWheel.getColor();
-                mFactTextView.setText(fact);
-                rl.setBackgroundColor(color);
-                mShowFactButton.setTextColor(color);
+                mFact = mFactBook.getFact();
+                mColor = mColorWheel.getColor();
+
+                mFactTextView.setText(mFact);
+                rl.setBackgroundColor(mColor);
+                mShowFactButton.setTextColor(mColor);
             }
         };
         mShowFactButton.setOnClickListener(listener);
     }
 
-
-
+    // 切换横屏的时候保存状态
     @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        mClient.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "FunFacts Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.agoodob.funfacts/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(mClient, viewAction);
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(KEY_FACT, mFact);
+        outState.putInt(KEY_COLOR, mColor);
     }
 
+    // 恢复状态
     @Override
-    public void onStop() {
-        super.onStop();
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mFact = savedInstanceState.getString(KEY_FACT);
+        mColor = savedInstanceState.getInt(KEY_COLOR);
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "FunFacts Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.agoodob.funfacts/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(mClient, viewAction);
-        mClient.disconnect();
+        mFactTextView.setText(mFact);
+        rl.setBackgroundColor(mColor);
+        mShowFactButton.setTextColor(mColor);
     }
 }
 
