@@ -7,9 +7,9 @@
 
 <br/>
 ### 6. 上线 Google Play
-    钱: 要给 Google 25 美金.
-    审核:  不像 Apple 需要审核, Google Play 可以直接上线.
-    如果是 Google Play 付费APP: 要申请个什么 Wallet Account.
+    [钱]:    要给 Google 25 美金.
+    [审核]:    不像 Apple 需要审核, Google Play 可以直接上线.
+    [如果是 Google Play 付费APP]:    要申请个 Wallet Account
 
 
 
@@ -29,6 +29,20 @@
     用 onRestoreInstanceState 恢复状态
         savedInstanceState.getString(KEY,VALUE);
         savedInstanceState.getInt(KEY,VALUE);
+
+    2. Activity 有不同的状态
+    http://stackoverflow.com/questions/8515936/android-activity-life-cycle-what-are-all-these-methods-for
+    https://developer.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/
+
+        onCreate()
+        onStart()
+        onRestart()
+        onResume()
+        onPause()
+        onStop()
+        onDestory()
+
+
 
 
 <br/>
@@ -68,12 +82,19 @@
 讲了:
 
     1. 什么是 API
+
     2. UI 线程, 后台线程. 耗时的, 和界面无关的任务都放到后台线程里去做, 不然界面就卡住不动了.
+
     3. 第三方库怎么用 (去 build.gradle 里的 dependenices 里添加一行就好)
+
     4. 第三方库 OkHttp (网络请求库)
+
     5. 第三方库 ButterKnife @Bind(R.id.xxx) (TextView) mTimeLabel;   Butterknife.bind(this);
+
     6. 系统弹窗怎么做  AlertDialogFragment extends DialogFragment
+
     7. JSON 解析 ( JSONObject )
+
     8. SimpleDataFormat 处理时间戳.
 
         ```
@@ -84,7 +105,9 @@
         ```
 
     9. layout:weight  在上级元素中占据的宽度比例
+
     10. gravity  对齐
+
     11. runOnUiThread(new Runnable() { .... })
 
 
@@ -92,7 +115,7 @@
 ### 2. Interactive Story (飞船故事)
 课程名:《Build an Interactive Story App》  <br/>
 
-官方的设计稿: <br/>
+官方设计稿: <br/>
 <img src="zImage/interactive_story_mockups.png">
 
 玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
@@ -108,14 +131,18 @@
 <img src="zImage/29.jpg" width="293">
 
 
-这个课是第 2 篇, 用了 2 个 Activity,  <br/>
+这个课是第 2 篇, 用了 2 个 Activity  <br/>
 讲了:
 
     1. @Override 不是必写的, 但是写了更好, 表明了你要覆盖掉父类的一个方法,
     如果你不小心写错大小写, 导致和父类想覆盖的那个方法名字不一样, 比如 i 和 l, 肉眼难辨认, 可能就会导致问题
+
     2. Activity 之间怎么切换 (Intent)
+
     3. 切换 Activity 时怎么传递数据 ( Intent.putExtra() )
+
     4. MVC 的概念: 用了游戏主机的手柄比喻 Controller, 游戏主机比作 Model, 显示器比作 View
+
     5. 在 APP 中实际用 MVC 来让代码更好理解和维护
         建 package, 名字叫 model, ui, 等等
 
@@ -124,7 +151,7 @@
 ### 1. Fun Facts (有趣冷知识)
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
-进入 APP 后，点击按钮，切换不同的有趣的冷知识. 下面是真机测试截图<br/>
+点击按钮，切换不同的有趣的冷知识.<br/>
 <img src="zImage/1.jpg" width="293">
 <img src="zImage/2.jpg" width="293">
 <img src="zImage/3.jpg" width="293">
@@ -133,18 +160,39 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 讲了:
 
-    1. Android Studio 怎么用(在 Project 视图和 Android 视图间切换)
+    1. Android Studio 怎么用
+        (在 Project 视图和 Android 视图间切换)
+
     2. 模拟器在哪里开
-    3. 怎么去掉顶部的 Action Bar (res/values/styles.xml) parent="Theme.AppCompat.Light.NoActionBar"
-    4. strings.xml 是什么 (1.便于多语言 2.避免重复在代码里写死文字)
+
+    3. 怎么去掉顶部的 Action Bar
+        (res/values/styles.xml) parent="Theme.AppCompat.Light.NoActionBar"
+
+    4. strings.xml 是什么
+        (1.便于多语言 2.避免重复在代码里写死文字, 同样的文字跨越数个文件的不同地方, 很难改, 容易改漏)
+
     5. findViewById 通过 ID 找 View.
+
     6. OnClickListener 监听点击事件
-    7. Random 生成随机数.  Random random = new Random(); random.nextInt(10);
+
+    7. Random 生成随机数.
+        Random random = new Random();
+        int x = random.nextInt(10);
+
     8. Toast 就是屏幕下方出现的黑色背景小提示框
         Toast.makeText(this, 文字在此, Toast.LENGTH_LONG).show();
+        第一个参数是上下文, 第二个是字符串, 第三个只能选 LENGTH_LONG 或者 LENGTH_SHORT，不能自定义显示时长
+
     9. 怎么改 APP ICON
         res/mipmap/ic_launcher.png
 
+
+
+<br/>
+
+---
+
+<br/>
 
 
 #### 学习资料来源
@@ -170,8 +218,12 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 #### 文件夹
 
-    FunFacts/  有趣冷知识 APP
-    InteractiveStory/ 太空探险故事 APP
-    Stormy/  今日天气 APP
-    StormyList/ 今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
-    zImage/ 跟安卓无关, 只是 README 里需要用到的图片
+    FunFacts/           有趣冷知识 APP
+    InteractiveStory/   太空探险故事 APP
+    Stormy/             今日天气 APP
+    StormyList/         今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
+    zImage/             跟安卓无关, 只是 README 里需要用到的图片
+
+
+
+

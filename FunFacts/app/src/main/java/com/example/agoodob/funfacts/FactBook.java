@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class FactBook {
 
-    private final String[] mFacts = new String[]{
+    public final String[] mFacts = new String[]{
             "Ants stretch when they wake up in the morning.",
             "Ostriches can run faster than horses.",
             "Olympic gold medals are actually made mostly of silver.",

@@ -31,8 +31,9 @@ public class FunFactsActivity extends AppCompatActivity {
     private TextView mFactTextView;
     private Button mShowFactButton;
     private RelativeLayout rl;
-    private String mFact;
-    private int mColor;
+    // 初始化
+    private String mFact = mFactBook.mFacts[0];
+    private int mColor = Color.parseColor(mColorWheel.mColors[0]);
 
 
     @Override
