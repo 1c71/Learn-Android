@@ -4,6 +4,16 @@
 
 
 
+<br/>
+### 7. build-a-selfdestructing-message-android-app
+模仿 SnapChat 的功能, 阅后即焚.
+这课用 Eclipse (应该是 2014年录制的课吧..)
+
+讲了:
+
+    操控摄像头
+    Parse.com 做后端
+
 
 <br/>
 ### 6. 上线 Google Play
@@ -15,7 +25,10 @@
 
 <br/>
 ### 5. Android Activity Lifecycle
-基于 Fun Fact 之上改进的
+首先学了横竖屏切换 Activity 会销毁重建, 然后基于 Fun Fact 改进了切换到横屏的时候保存当前的冷知识, 不会回复到第一个.
+第二个项目是高尔夫计分板.
+
+
 
 讲了:
 
@@ -42,7 +55,13 @@
         onStop()
         onDestory()
 
+    3. 用 SharedPerferences 保存数据, 这样下次关掉 APP 再打开也能拿到数据
+        1. xShare = getSharedPreferences(aa, Context.MODE_PRIVATE);
+        2. xEdit = xShare.edit();
 
+        在 onPause() 里
+        mEdit.putString(bb, value) 或者 putBoolean, putInt..
+        mEdit.apply(); //保存修改
 
 
 <br/>
@@ -83,13 +102,38 @@
 
     1. 什么是 API
 
+    2. 联网的权限 和检查网络情况的权限, 要在 AndroidMainfest.xml 里写申请
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     2. UI 线程, 后台线程. 耗时的, 和界面无关的任务都放到后台线程里去做, 不然界面就卡住不动了.
 
     3. 第三方库怎么用 (去 build.gradle 里的 dependenices 里添加一行就好)
 
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            testCompile 'junit:junit:4.12'
+            compile 'com.android.support:appcompat-v7:23.1.1'
+            compile 'com.squareup.okhttp3:okhttp:3.0.1'
+            compile 'com.jakewharton:butterknife:7.0.1'
+        }
+
     4. 第三方库 OkHttp (网络请求库)
 
-    5. 第三方库 ButterKnife @Bind(R.id.xxx) (TextView) mTimeLabel;   Butterknife.bind(this);
+            String forecastUrl = "http://www.something.com";
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+                    .url(forecastUrl)
+                    .build();
+            Call call = client.newCall(request);
+            call.enqueue(new Callback(){
+                ... 里面太长就不写全了..
+                })
+
+
+    5. 第三方库 ButterKnife
+        @Bind(R.id.xxx) (TextView) mTimeLabel;
+        Butterknife.bind(this);
 
     6. 系统弹窗怎么做  AlertDialogFragment extends DialogFragment
 
