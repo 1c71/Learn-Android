@@ -49,10 +49,10 @@
 ### 4. 改进 Stormy  - 用列表显示天气数据
 课程名: Android Lists and Adapters
 
-<img src="zImage/41.jpg" width="293">
-<img src="zImage/42.jpg" width="293">
-<img src="zImage/43.jpg" width="293">
-<img src="zImage/44.jpg" width="293">
+<img src="zImage/41.jpg" width="219">
+<img src="zImage/42.jpg" width="219">
+<img src="zImage/43.jpg" width="219">
+<img src="zImage/44.jpg" width="219">
 
 
 讲了:
@@ -120,15 +120,15 @@
 
 玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
 真机测试的截图(我汉化了下)<br/>
-<img src="zImage/21.jpg" width="293">
-<img src="zImage/22.jpg" width="293">
-<img src="zImage/23.jpg" width="293">
-<img src="zImage/24.jpg" width="293">
-<img src="zImage/25.jpg" width="293">
-<img src="zImage/26.jpg" width="293">
-<img src="zImage/27.jpg" width="293">
-<img src="zImage/28.jpg" width="293">
-<img src="zImage/29.jpg" width="293">
+<img src="zImage/21.jpg" width="175">
+<img src="zImage/22.jpg" width="175">
+<img src="zImage/23.jpg" width="175">
+<img src="zImage/24.jpg" width="175">
+<img src="zImage/25.jpg" width="175">
+<img src="zImage/26.jpg" width="175">
+<img src="zImage/27.jpg" width="175">
+<img src="zImage/28.jpg" width="175">
+<img src="zImage/29.jpg" width="175">
 
 
 这个课是第 2 篇, 用了 2 个 Activity  <br/>
@@ -152,11 +152,11 @@
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 点击按钮，切换不同的有趣的冷知识.<br/>
-<img src="zImage/1.jpg" width="293">
-<img src="zImage/2.jpg" width="293">
-<img src="zImage/3.jpg" width="293">
-<img src="zImage/4.jpg" width="293">
-<img src="zImage/5.jpg" width="293">
+<img src="zImage/1.jpg" width="175">
+<img src="zImage/2.jpg" width="175">
+<img src="zImage/3.jpg" width="175">
+<img src="zImage/4.jpg" width="175">
+<img src="zImage/5.jpg" width="175">
 
 讲了:
 
