@@ -7,7 +7,7 @@
 <br/>
 ### 7. build-a-selfdestructing-message-android-app
 模仿 SnapChat 的功能, 阅后即焚.
-这课用 Eclipse (应该是 2014年录制的课吧..)
+这课用 Eclipse (应该是 2014年录制的课吧..) 不过我用 Android Studio 也没关系, 只是有的地方位置放的不一样.
 
 讲了:
 
@@ -63,15 +63,20 @@
         mEdit.putString(bb, value) 或者 putBoolean, putInt..
         mEdit.apply(); //保存修改
 
+        如果要清掉所有数据就
+        mEdit.clear();
+        mEdit.apply();
+
+
 
 <br/>
 ### 4. 改进 Stormy  - 用列表显示天气数据
 课程名: Android Lists and Adapters
 
-<img src="zImage/41.jpg" width="219">
-<img src="zImage/42.jpg" width="219">
-<img src="zImage/43.jpg" width="219">
-<img src="zImage/44.jpg" width="219">
+<img src="zImage/41.jpg" width="218">
+<img src="zImage/42.jpg" width="218">
+<img src="zImage/43.jpg" width="218">
+<img src="zImage/44.jpg" width="218">
 
 
 讲了:
@@ -262,11 +267,21 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 
 #### 文件夹
 
-    FunFacts/           有趣冷知识 APP
-    InteractiveStory/   太空探险故事 APP
-    Stormy/             今日天气 APP
-    StormyList/         今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
-    zImage/             跟安卓无关, 只是 README 里需要用到的图片
+    FunFacts/             有趣冷知识 APP
+
+    InteractiveStory/     太空探险故事 APP
+
+    GolfCard/             高尔夫18洞计分 APP
+
+    SelfDestructMessage/  Snapchat 模仿 APP
+
+    SharePerfences/       练习 SharePerferences 的 APP
+
+    Stormy/               今日天气 APP
+
+    StormyList/           今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
+
+    zImage/               跟安卓无关, 只是 README 里需要用到的图片
 
 
 
