@@ -5,9 +5,14 @@
 
 
 <br/>
-### 7. build-a-selfdestructing-message-android-app
+### 7. 两门课的笔记
+
+1. build-a-selfdestructing-message-android-app
+2. implementing-designs-for-android
+
+第2门课是基于第1门的基础上改UI，这俩课都是用 Eclipse.
+
 模仿 SnapChat 的功能, 阅后即焚.
-这课用 Eclipse (应该是 2014年录制的课吧..) 不过我用 Android Studio 也没关系, 只是有的地方位置放的不一样.
 
 讲了:
 

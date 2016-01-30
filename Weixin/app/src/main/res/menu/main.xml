@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- action bar 里面的搜索图标 -->
+    <item android:title="@string/action_search"
+        android:id="@+id/action_search"
+        android:icon="@drawable/actionbar_search_icon"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="ifRoom|collapseActionView">
+    </item>
+
+    <!-- action bar 里面那个加号图标-->
+    <item android:title="@string/action_add"
+          android:id="@+id/action_add"
+          android:icon="@drawable/actionbar_add_icon"
+          android:actionViewClass="android.widget.SearchView"
+          android:showAsAction="ifRoom|collapseActionView">
+    </item>
+
+    <!-- 弹出菜单 - 发起群聊-->
+    <item android:title="@string/menu_group_chat"
+          android:id="@+id/menu_group_chat"
+          android:icon="@drawable/menu_group_chat_icon">
+    </item>
+
+    <!-- 弹出菜单 - 添加朋友 -->
+    <item android:title="@string/menu_add_friend"
+          android:id="@+id/menu_add_friend"
+          android:icon="@drawable/menu_add_icon">
+    </item>
+
+    <!-- 弹出菜单 - 扫一扫 -->
+    <item android:title="@string/menu_scan"
+          android:id="@+id/menu_scan"
+          android:icon="@drawable/ic_menu_friendslist">
+    </item>
+
+    <!-- 弹出菜单 - 收钱 -->
+    <item android:title="@string/menu_money"
+          android:id="@+id/menu_money"
+          android:icon="@drawable/menu_group_chat_icon">
+    </item>
+
+    <!-- 弹出菜单 - 帮助与反馈 -->
+    <item android:title="@string/menu_help_and_feedback"
+          android:id="@+id/menu_help_and_feedback"
+          android:icon="@drawable/menu_group_chat_icon">
+    </item>
+
+</menu>

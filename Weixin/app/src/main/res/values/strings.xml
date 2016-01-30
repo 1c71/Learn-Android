@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">假微信</string>
+    <string name="action_search">查找</string>
+    <string name="action_add">添加</string>
+    <string name="action_feedback">意见反馈</string>
+
+    <string name="menu_group_chat">发起群聊</string>
+    <string name="menu_add_friend">添加朋友</string>
+    <string name="menu_scan">扫一扫</string>
+    <string name="menu_money">收钱</string>
+    <string name="menu_help_and_feedback">帮助与反馈</string>
+
+    <string name="tab_contact_list">通讯录</string>
+    <string name="tab_explore">发现</string>
+    <string name="tab_me">我</string>
+</resources>
