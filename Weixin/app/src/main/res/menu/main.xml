@@ -6,7 +6,7 @@
         android:id="@+id/action_search"
         android:icon="@drawable/actionbar_search_icon"
         android:actionViewClass="android.widget.SearchView"
-        android:showAsAction="ifRoom|collapseActionView">
+        android:showAsAction="always">
     </item>
 
     <!-- action bar 里面那个加号图标-->
@@ -14,7 +14,7 @@
           android:id="@+id/action_add"
           android:icon="@drawable/actionbar_add_icon"
           android:actionViewClass="android.widget.SearchView"
-          android:showAsAction="ifRoom|collapseActionView">
+          android:showAsAction="always">
     </item>
 
     <!-- 弹出菜单 - 发起群聊-->

@@ -2,6 +2,10 @@
 <manifest package="com.example.agoodob.todo"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,6 +18,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".CustView">
+        </activity>
+        <activity android:name=".CustButton">
+        </activity>
+        <activity android:name=".TrySpinner">
+        </activity>
+        <activity android:name=".DateAndTime">
+        </activity>
+        <activity android:name=".trySeekBar">
+        </activity>
+        <activity android:name=".BlueT">
+        </activity>
+        <activity android:name=".GetLocat">
         </activity>
     </application>
 

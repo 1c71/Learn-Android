@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ToDo</string>
+
+    <string-array name="plant_array">
+        <item>123</item>
+        <item>345</item>
+        <item>haha</item>
+    </string-array>
 </resources>
