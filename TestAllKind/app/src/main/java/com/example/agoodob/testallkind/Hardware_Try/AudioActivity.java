@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Hardware_Try;
 
 
 import android.app.Activity;
@@ -13,6 +13,8 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.agoodob.testallkind.R;
 
 /*
 * 调节手机的三种模式，有声音，震动和静音

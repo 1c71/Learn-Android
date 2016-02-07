@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Animation_Try;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.agoodob.testallkind.R;
 
 public class myAnimation extends Activity {
 

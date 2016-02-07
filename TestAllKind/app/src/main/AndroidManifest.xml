@@ -21,35 +21,35 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".myAnimation">
+        <activity android:name=".Animation_Try.myAnimation">
         </activity>
-        <activity android:name=".RecordActivity">
+        <activity android:name=".Hardware_Try.RecordActivity">
         </activity>
-        <activity android:name=".AudioActivity">
+        <activity android:name=".Hardware_Try.AudioActivity">
         </activity>
         <activity android:name=".AutoCompleteActivity">
         </activity>
-        <activity android:name=".CamActivity">
+        <activity android:name=".Hardware_Try.CamActivity">
         </activity>
         <activity android:name=".Gesture2">
         </activity>
         <activity android:name=".ImageSw">
         </activity>
-        <activity android:name=".IntelStorege">
+        <activity android:name=".DataStorage.IntelStorege">
         </activity>
-        <activity android:name=".jsonActivity">
+        <activity android:name=".Network_Try.jsonActivity">
         </activity>
         <activity android:name=".loading">
         </activity>
         <activity android:name=".Touch">
         </activity>
-        <activity android:name=".Web">
+        <activity android:name=".Network_Try.Web">
         </activity>
-        <activity android:name=".Web2">
+        <activity android:name=".Network_Try.Web2">
         </activity>
-        <activity android:name=".Network">
+        <activity android:name=".Network_Try.Network">
         </activity>
-        <activity android:name=".SharePerfer">
+        <activity android:name=".DataStorage.SharePerfer">
         </activity>
         <activity android:name=".BoardCast">
         </activity>
@@ -63,9 +63,22 @@
 
         <activity android:name=".PushNoti">
         </activity>
-        <activity android:name=".WIFI">
+        <activity android:name=".Network_Try.WIFI">
         </activity>
         <activity android:name=".ResultActivity">
+        </activity>
+        <activity
+            android:name=".Notification.StatusNoti"
+            android:label="@string/title_activity_status_noti"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Notification.StatusNotiFired">
+        </activity>
+        <activity android:name=".UI.TryMenu">
+        </activity>
+        <activity android:name=".UI.TryMenuJump">
+        </activity>
+        <activity android:name=".DataStorage.DataStorge_File">
         </activity>
     </application>
 

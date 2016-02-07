@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="dddd"
+        android:icon="@drawable/aa"
+        android:showAsAction="ifRoom|withText">
+        <menu>
+            <item android:title="0000">1111</item>
+            <item android:title="1111">2222</item>
+        </menu>
+    </item>
+    <!-- 这种就是菜单套菜单 -->
+    <item android:title="虎虎"
+          android:icon="@drawable/xin"
+          android:showAsAction="withText">
+    </item>
+</menu>

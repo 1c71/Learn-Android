@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Network_Try;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,7 +26,9 @@ import android.os.Bundle;
     import android.widget.TextView;
     import android.widget.Toast;
 
-    import java.util.List;
+import com.example.agoodob.testallkind.R;
+
+import java.util.List;
 
     public class WIFI extends Activity  {
         ListView lv;

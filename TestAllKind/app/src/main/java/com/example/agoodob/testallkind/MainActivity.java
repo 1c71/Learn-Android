@@ -10,12 +10,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.agoodob.testallkind.UI.TryMenu;
+
 public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent i = new Intent(this, WIFI.class);
+        Intent i = new Intent(this, TryMenu.class);
         startActivity(i);
     }
 

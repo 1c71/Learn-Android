@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.DataStorage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +12,10 @@ import android.os.Bundle;
     import android.widget.EditText;
     import android.widget.TextView;
     import android.widget.Toast;
-    import java.io.FileInputStream;
+
+import com.example.agoodob.testallkind.R;
+
+import java.io.FileInputStream;
     import java.io.FileOutputStream;
 
     public class IntelStorege extends Activity  {

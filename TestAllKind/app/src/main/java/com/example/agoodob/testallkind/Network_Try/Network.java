@@ -1,7 +1,9 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Network_Try;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.agoodob.testallkind.R;
 
 public class Network extends AppCompatActivity {
 

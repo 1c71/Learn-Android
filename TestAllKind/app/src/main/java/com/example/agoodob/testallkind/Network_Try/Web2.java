@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Network_Try;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.agoodob.testallkind.R;
 
 
 public class Web2 extends Activity {

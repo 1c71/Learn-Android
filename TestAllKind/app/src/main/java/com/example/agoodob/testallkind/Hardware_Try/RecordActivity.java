@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Hardware_Try;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -16,6 +16,9 @@ import android.widget.Button;
 
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.agoodob.testallkind.R;
+
 import java.io.IOException;
 
 // 录音用的

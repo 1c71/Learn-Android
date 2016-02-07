@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Hardware_Try;
 
 
 import android.bluetooth.BluetoothAdapter;
@@ -26,6 +26,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.agoodob.testallkind.R;
 
 import java.util.ArrayList;
 import java.util.Set;

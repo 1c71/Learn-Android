@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.Network_Try;
 
     import android.app.Activity;
     import android.os.StrictMode;
@@ -10,6 +10,8 @@ package com.example.agoodob.testallkind;
     import android.view.MenuItem;
     import android.widget.Button;
     import android.widget.TextView;
+
+    import com.example.agoodob.testallkind.R;
 
     import org.json.JSONArray;
     import org.json.JSONException;
