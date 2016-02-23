@@ -2,22 +2,32 @@
 
 
 
+<br/>
+### 零碎
+Ctrl+Q 看函数文档很重要
+
+
 
 
 <br/>
-### 7. 两门课的笔记
+### 打电话
 
-1. build-a-selfdestructing-message-android-app
-2. implementing-designs-for-android
+打电话要权限
+AndroidManifest.xml
+<uses-permission android:name="android.permission.CALL_PHONE"/>
 
-第2门课是基于第1门的基础上改UI，这俩课都是用 Eclipse.
+```java
+Intent i = new Intent();
+i.setAction(Intent.ACTION_CALL);
+i.setData(Uri.parse("tel:" + number));
+startActivity(i);
+```
+number 就是电话号码
 
-模仿 SnapChat 的功能, 阅后即焚.
+<br/>
+### 发短信
 
-讲了:
 
-    操控摄像头
-    Parse.com 做后端
 
 
 <br/>
@@ -32,8 +42,6 @@
 ### 5. Android Activity Lifecycle
 首先学了横竖屏切换 Activity 会销毁重建, 然后基于 Fun Fact 改进了切换到横屏的时候保存当前的冷知识, 不会回复到第一个.
 第二个项目是高尔夫计分板.
-
-
 
 讲了:
 
@@ -71,8 +79,6 @@
         如果要清掉所有数据就
         mEdit.clear();
         mEdit.apply();
-
-
 
 <br/>
 ### 4. 改进 Stormy  - 用列表显示天气数据
@@ -287,7 +293,5 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     StormyList/           今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
 
     zImage/               跟安卓无关, 只是 README 里需要用到的图片
-
-
 
 

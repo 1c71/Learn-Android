@@ -66,7 +66,6 @@ public class StatusNoti extends AppCompatActivity {
                 Intent i = new Intent(StatusNoti.this, StatusNotiFired.class);
                 PendingIntent pt = PendingIntent.getActivity(StatusNoti.this, 0, i, 0);
 
-                //Uri uri = Uri.parse("file:///mnt/sdcard/xxx.mp3");
                 long[] virbrate = {3000, 2000, 50};
                 notiBuilder.setContentIntent(pt)
                         .setContentTitle("点击查看文件") // 最上面

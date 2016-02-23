@@ -17,7 +17,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent i = new Intent(this, TryMenu.class);
+        Intent i = new Intent(this, SendText.class);
         startActivity(i);
     }
 
