@@ -8,26 +8,25 @@
     <ImageSwitcher
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageSwitcher"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="168dp" />
+        android:id="@+id/imageSwitcher22"
+        android:layout_toEndOf="@+id/nextImage"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/prevImage"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="previous"
-        android:id="@+id/button"
+        android:text="上一张图"
+        android:id="@+id/prevImage"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="222"
-        android:id="@+id/button2"
+        android:text="下一张图"
+        android:id="@+id/nextImage"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

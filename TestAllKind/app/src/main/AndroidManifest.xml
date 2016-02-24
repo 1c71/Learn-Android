@@ -29,13 +29,13 @@
         </activity>
         <activity android:name=".Hardware_Try.AudioActivity">
         </activity>
-        <activity android:name=".AutoCompleteActivity">
+        <activity android:name=".UI.AutoCompleteActivity">
         </activity>
         <activity android:name=".Hardware_Try.CamActivity">
         </activity>
         <activity android:name=".Gesture2">
         </activity>
-        <activity android:name=".ImageSw">
+        <activity android:name=".UI.ImageSw">
         </activity>
         <activity android:name=".DataStorage.IntelStorege">
         </activity>
@@ -43,7 +43,7 @@
         </activity>
         <activity android:name=".loading">
         </activity>
-        <activity android:name=".Touch">
+        <activity android:name=".Hardware_Try.Touch">
         </activity>
         <activity android:name=".Network_Try.Web">
         </activity>
@@ -84,9 +84,33 @@
         </activity>
         <activity android:name=".TryContentProvider">
         </activity>
-        <activity android:name=".CallNumber">
+        <activity android:name=".Hardware_Try.CallNumber">
         </activity>
-        <activity android:name=".SendText">
+        <activity android:name=".Hardware_Try.SendText">
+        </activity>
+        <activity android:name=".UI.TryTabHost">
+        </activity>
+        <activity android:name=".ViewPagerTry">
+        </activity>
+        <activity
+            android:name=".EmptyNewActivity.TabbedActivityTry"
+            android:label="@string/title_activity_tabbed_activity_try"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".EmptyNewActivity.SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
+        <activity
+            android:name=".EmptyNewActivity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".DataStorage.InternalStoregeTry">
+        </activity>
+        <activity android:name=".Hardware_Try.CallCamera">
+        </activity>
+        <activity android:name=".LifeCycle.ActivityLifeCycle">
         </activity>
     </application>
 

@@ -10,16 +10,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.agoodob.testallkind.UI.TryMenu;
+import com.example.agoodob.testallkind.DataStorage.InternalStoregeTry;
+import com.example.agoodob.testallkind.UI.ImageSw;
 
 public class MainActivity extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent i = new Intent(this, SendText.class);
+        Intent i = new Intent(this, InternalStoregeTry.class);
         startActivity(i);
     }
+
+
+
+
+
+
+
+
+
 
     public void open(View view){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

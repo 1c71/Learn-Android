@@ -1,16 +1,24 @@
-### 这里存放学安卓的代码和笔记 (倒序排列, 最新的放最上面)
+### 这里存学安卓的代码和笔记 (倒序排列, 最新的放最上面)
 
+
+
+
+<br>
+#### 安卓的存储
+1 存手机本身的存储里面, 这个叫 Internal Storege
+2 External Storage, 其实就是 SD 卡
+3 网络存储，其实就是发请求到服务器自己存起来
+4 SharePerference Key value
+5 SQLite 数据库
 
 
 <br/>
-### 零碎
+#### 零碎
 Ctrl+Q 看函数文档很重要
 
 
-
-
 <br/>
-### 打电话
+#### 打电话
 
 打电话要权限
 AndroidManifest.xml
@@ -25,16 +33,33 @@ startActivity(i);
 number 就是电话号码
 
 <br/>
-### 发短信
+#### 发短信
+先在布局文件里自己拉两个 EditText 然后:
 
+```java
+// 拿到手机号
+EditText et_phone = (EditText) findViewById(R.id.sendTextNumber);
+String phone = et_phone.getText().toString();
 
+// 拿到短信内容
+EditText et_content = (EditText) findViewById(R.id.sendTextContent);
+String content = et_content.getText().toString();
 
+SmsManager sm = SmsManager.getDefault();
+sm.sendTextMessage(phone, null, content, null, null);
+// 第二个参数是 SMSC 短信中心，不用管它，不设置才对
+// 第四个参数是 pendingIntent
+// 第五个参数是 deliveryIntent
+```
 
 <br/>
-### 6. 上线 Google Play
+#### 6. 上线 Google Play
+国内用不了不过可以了解下
+
     [钱]:    要给 Google 25 美金.
     [审核]:    不像 Apple 需要审核, Google Play 可以直接上线.
     [如果是 Google Play 付费APP]:    要申请个 Wallet Account
+    好像和苹果一样都是收掉 30% 的收入?
 
 
 

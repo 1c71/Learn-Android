@@ -1,4 +1,4 @@
-package com.example.agoodob.testallkind;
+package com.example.agoodob.testallkind.UI;
 
 
 import android.app.Activity;
@@ -24,6 +24,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Toast;
+
+import com.example.agoodob.testallkind.R;
+
 import java.io.IOException;
 
 
