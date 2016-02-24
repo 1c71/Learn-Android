@@ -112,6 +112,10 @@
         </activity>
         <activity android:name=".LifeCycle.ActivityLifeCycle">
         </activity>
+        <activity android:name=".Network_Try.NetworkImage">
+        </activity>
+        <activity android:name=".Network_Try.DownloadFile_Try">
+        </activity>
     </application>
 
 </manifest>

@@ -3,8 +3,18 @@
 
 
 
+
+
 <br>
-#### 安卓的存储
+#### 10.
+
+
+
+
+
+
+<br>
+#### 9. 安卓的存储
 1 存手机本身的存储里面, 这个叫 Internal Storege
 2 External Storage, 其实就是 SD 卡
 3 网络存储，其实就是发请求到服务器自己存起来
@@ -13,12 +23,7 @@
 
 
 <br/>
-#### 零碎
-Ctrl+Q 看函数文档很重要
-
-
-<br/>
-#### 打电话
+#### 8. 打电话
 
 打电话要权限
 AndroidManifest.xml
@@ -33,7 +38,7 @@ startActivity(i);
 number 就是电话号码
 
 <br/>
-#### 发短信
+#### 7. 发短信
 先在布局文件里自己拉两个 EditText 然后:
 
 ```java
@@ -320,3 +325,7 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
     zImage/               跟安卓无关, 只是 README 里需要用到的图片
 
 
+
+<br/>
+#### 9. 零碎
+Ctrl+Q 看函数文档很重要
