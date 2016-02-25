@@ -1,11 +1,15 @@
 package com.example.agoodob.mobilesafe1c7;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -19,13 +23,36 @@ import android.widget.GridView;
  */
 public class MainActivity extends AppCompatActivity {
 
+
+    private String[] mItems = new String[]{"清理加速", "流量监控", "防盗功能", "软件管理",
+            "手机杀毒", "进程管理", "高级工具", "拦截骚扰", "设置中心"};
+
+    private int[] mPics = new int[]{R.drawable.icon_boat,
+            R.drawable.icon_bus, R.drawable.icon_stamp,
+            R.drawable.icon_drink, R.drawable.icon_fork,
+            R.drawable.icon_sign, R.drawable.icon_sliper,
+            R.drawable.icon_tree, R.drawable.icon_water
+            };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         GridView gv = (GridView) findViewById(R.id.gridView);
-        gv.setAdapter(null);
+        gv.setAdapter(new MainAdapter());
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 8:
+                        // 设置中心
+                        Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(i);
+                        break;
+                }
+            }
+        });
 
     }
 
@@ -33,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 0;
+            return mItems.length;
         }
 
         @Override
@@ -43,12 +70,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public long getItemId(int position) {
-            return 0;
+            return position;
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
+
+            View view = View.inflate(MainActivity.this,
+                    R.layout.main_grid_view, null);
+
+            ImageView ivItem = (ImageView) view.findViewById(R.id.iv_image);
+            TextView tvItem = (TextView) view.findViewById(R.id.tv_item);
+
+            tvItem.setText(mItems[position]);
+            ivItem.setImageResource(mPics[position]);
+            return view;
         }
     }
 }
