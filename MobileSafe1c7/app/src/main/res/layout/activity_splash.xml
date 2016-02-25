@@ -8,15 +8,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.agoodob.mobilesafe1c7.SplashActivity">
+    tools:context="com.example.agoodob.mobilesafe1c7.SplashActivity"
+    android:background="@drawable/splash">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Splash 页面"
-        android:id="@+id/textView"
+        android:text="New Text"
+        android:id="@+id/splashDownloadProgressTextView"
+        android:textColor="#f00"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XX 手机卫士"
+        android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="127dp"
-        android:textSize="20sp"/>
+        android:layout_marginTop="115dp"
+        android:textColor="#ffffff"
+        android:textSize="34sp"/>
 </RelativeLayout>
