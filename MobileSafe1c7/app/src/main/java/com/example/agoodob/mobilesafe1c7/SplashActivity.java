@@ -3,6 +3,7 @@ package com.example.agoodob.mobilesafe1c7;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Environment;
@@ -11,6 +12,8 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,9 +47,6 @@ import utils.StreamUtils;
  */
 public class SplashActivity extends AppCompatActivity {
 
-    // 是否检查新版本, 为了方便可以在这里开关
-    private static final boolean checkUpdateSwitch = false;
-
     private static final int CODE_UPDATE_DIALOG = 0;
     private static final int CODE_URL_ERROR = 1;
     private static final int CODE_NET_ERROR = 2;
@@ -59,11 +59,12 @@ public class SplashActivity extends AppCompatActivity {
     private String mDesc;
     private String mDownloadLink;
 
+    private RelativeLayout rl_root;
+
     // Splash 页面的固定显示时间
-    private long splashDisplayTime = 2000;
+    private long splashDisplayTime = 1600;
 
     TextView dProgressTextView;
-
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -96,14 +97,25 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        SharedPreferences mPrefs = getSharedPreferences("config", MODE_PRIVATE);
+        boolean checkUpdateSwitch = mPrefs.getBoolean("auto_update", false);
+
+        rl_root = (RelativeLayout) findViewById(R.id.rl_root);
+        // 根布局元素
+
         // 检查更新
         if (checkUpdateSwitch){
             dProgressTextView = (TextView) findViewById(R.id.splashDownloadProgressTextView);
             checkUpdate();
         } else {
-            enterHome();
+            mHandler.sendEmptyMessageDelayed(CODE_ENTER_HOME, 2000);
+            // 延时一定时间后发送消息
         }
 
+        // 渐变动画效果, 慢慢出现
+        AlphaAnimation anim = new AlphaAnimation(0.5f, 1f);
+        anim.setDuration(1200);
+        rl_root.startAnimation(anim);
     }
 
     // 检查更新

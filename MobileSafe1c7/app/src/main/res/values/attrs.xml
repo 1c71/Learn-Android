@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 给这个控件增加一些自定义属性 -->
+    <declare-styleable name="SettingsItemView">
+        <attr name="mTitle" format="string"/>
+        <attr name="desc_on" format="string"/>
+        <attr name="desc_off" format="string"/>
+    </declare-styleable>
+</resources>

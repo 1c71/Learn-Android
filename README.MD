@@ -18,7 +18,7 @@
 1 存手机本身的存储里面, 这个叫 Internal Storege
 2 External Storage, 其实就是 SD 卡
 3 网络存储，其实就是发请求到服务器自己存起来
-4 SharePerference Key value
+4 SharePerference - 如果你有少量的 key value 数据要存就用这个, 官方文档说的
 5 SQLite 数据库
 
 
