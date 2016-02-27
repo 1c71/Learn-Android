@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.agoodob.mobilesafe1c7.Step2Activity"
+    android:background="#ffffff">
+
+    <TextView style="@style/TitleStyle"
+              android:text="引导页第 2 步"
+              android:id="@+id/textView3"/>
+
+    <com.example.agoodob.mobilesafe1c7.SettingsItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="点击绑定 SIM 卡"
+        app:desc_off="未绑定"
+        app:desc_on="已绑定"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view">
+    </com.example.agoodob.mobilesafe1c7.SettingsItemView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:id="@+id/Step2Next"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上一步"
+        android:id="@+id/Step2Previous"
+        android:layout_alignTop="@+id/Step2Next"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/ninja"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="被盗后也不用担心"
+        android:id="@+id/textView5"
+        android:textSize="20dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

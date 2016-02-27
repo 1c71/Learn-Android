@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             };
 
     private SharedPreferences mPrefs;
+    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void showPasswordInputDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        AlertDialog dialog = builder.create();
+        dialog = builder.create();
 
         View view = View.inflate(this, R.layout.dialog_input_password, null);
 
@@ -107,12 +108,15 @@ public class MainActivity extends AppCompatActivity {
                 String pwd = et_password.getText().toString();
 
                 if(!TextUtils.isEmpty(pwd)){
-                    //mPrefs.edit().putString("password", pwd).apply();
+
                     String storePassword = mPrefs.getString("password", null);
-                    if (pwd == storePassword){
-//                        Intent i = new Intent(MainActivity.class);
-//                        startActivity(i);
+
+                    if (pwd.equals(storePassword)){
                         Toast.makeText(MainActivity.this, "密码正确", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                        // 跳转到手机防盗页
+                        Intent i = new Intent(MainActivity.this, LostFindActivity.class);
+                        startActivity(i);
                     } else {
                         Toast.makeText(MainActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
                     }
@@ -126,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                dialog.dismiss();
             }
         });
 
@@ -142,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void showPasswordSetDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        AlertDialog dialog = builder.create();
+        dialog = builder.create();
 
         View view = View.inflate(this, R.layout.dialog_set_password, null);
 
@@ -160,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(pwd) && !TextUtils.isEmpty(pwd_confirm)){
                     mPrefs.edit().putString("password", pwd).apply();
                     // 把用户输入的密码存起来
+                    dialog.dismiss();
                 } else {
                     Toast.makeText(MainActivity.this, "不能为空", Toast.LENGTH_SHORT).show();
                 }
@@ -170,13 +175,12 @@ public class MainActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                dialog.dismiss();
             }
         });
 
         dialog.setView(view, 0, 0, 0, 0); // 保证在 2.x 版本上运行没问题
         // 将自定义的布局文件设置给 view
-
 
         dialog.show();
     }

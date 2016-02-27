@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.agoodob.mobilesafe1c7.Step1Activity"
+    android:background="#ffffff">
+
+    <TextView style="@style/TitleStyle"
+              android:text="引导页第 1 步"/>
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="下一步"
+        android:id="@+id/Step1"
+        android:background="@drawable/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="43dp"/>
+
+
+</RelativeLayout>

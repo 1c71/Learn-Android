@@ -23,7 +23,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity">
-
+        </activity>
+        <activity android:name=".LostFindActivity">
+        </activity>
+        <activity android:name=".Step1Activity">
+        </activity>
+        <activity android:name=".Step2Activity">
+        </activity>
+        <activity android:name=".Step3Activity">
+        </activity>
+        <activity android:name=".Step4Activity">
         </activity>
     </application>
 
