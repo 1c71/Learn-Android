@@ -19,7 +19,7 @@
         </activity>
         <receiver android:name="com.example.agoodob.ipcall.CallReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL"></action>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
             </intent-filter>
         </receiver>
     </application>

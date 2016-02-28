@@ -14,7 +14,7 @@ public class CallReceiver extends BroadcastReceiver
 {
     @Override
     public void onReceive(Context context, Intent intent) {
-        System.out.println("收到");
+        System.out.println("收到了吗????");
         // 添加 IP 线路
         // 在打电话的广播中，会携带拨打的电话号码
         String number = getResultData();
@@ -24,7 +24,6 @@ public class CallReceiver extends BroadcastReceiver
 
         // 把 IP 线路添加至用户拨打号码的前面
         number = ipNumber + number;
-
         setResultData(number);
 
     }
