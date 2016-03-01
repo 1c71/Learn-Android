@@ -11,7 +11,7 @@ import android.widget.Button;
  * 手机防盗, 第1个设置向导页
  *
  */
-public class Step1Activity extends AppCompatActivity {
+public class Step1Activity extends BaseSetupActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,21 @@ public class Step1Activity extends AppCompatActivity {
     }
 
     public void next(){
+        showNextPage();
+    }
+
+    @Override
+    public void showNextPage() {
         Intent i = new Intent(Step1Activity.this, Step2Activity.class);
         startActivity(i);
         finish();
 
         // 两个界面切换的动画
         overridePendingTransition(R.anim.tran_in, R.anim.tran_out);
+    }
+
+    @Override
+    public void showPrevPage() {
+
     }
 }

@@ -11,7 +11,7 @@ import android.widget.Button;
  * 2016-2-27
  * 第四个页面, 提示设置成功
  */
-public class Step4Activity extends AppCompatActivity {
+public class Step4Activity extends BaseSetupActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,22 @@ public class Step4Activity extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Step4Activity.this, LostFindActivity.class);
-                startActivity(i);
-                finish();
-                // 两个界面切换的动画
-                overridePendingTransition(R.anim.tran_in, R.anim.tran_out);
+                showPrevPage();
             }
         });
+    }
+
+    @Override
+    public void showNextPage() {
+
+    }
+
+    @Override
+    public void showPrevPage() {
+        Intent i = new Intent(Step4Activity.this, LostFindActivity.class);
+        startActivity(i);
+        finish();
+        // 两个界面切换的动画
+        overridePendingTransition(R.anim.tran_in, R.anim.tran_out);
     }
 }

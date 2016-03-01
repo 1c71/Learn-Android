@@ -11,7 +11,7 @@ import android.widget.Button;
  * 2016-2-27
  *
  */
-public class Step3Activity extends AppCompatActivity {
+public class Step3Activity extends BaseSetupActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,15 @@ public class Step3Activity extends AppCompatActivity {
     }
 
     public void next(){
+        showNextPage();
+    }
+
+    public void prev(){
+        showPrevPage();
+    }
+
+    @Override
+    public void showNextPage() {
         Intent i = new Intent(Step3Activity.this, Step4Activity.class);
         startActivity(i);
         finish();
@@ -41,9 +50,12 @@ public class Step3Activity extends AppCompatActivity {
         overridePendingTransition(R.anim.tran_in, R.anim.tran_out);
     }
 
-    public void prev(){
+    @Override
+    public void showPrevPage() {
         Intent i = new Intent(Step3Activity.this, Step2Activity.class);
         startActivity(i);
         finish();
+        // 两个界面切换的动画
+        overridePendingTransition(R.anim.trans_prev_in, R.anim.trans_prev_out);
     }
 }

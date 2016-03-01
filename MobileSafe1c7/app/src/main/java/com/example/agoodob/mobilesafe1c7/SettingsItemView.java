@@ -10,10 +10,16 @@ import android.widget.TextView;
 /**
  * 2016/2/25 第一次创建
  * 2016/2/26 更新
+ *
+ * 自定义控件
+ * 关键点是 View.inflate 里写自己定义的那个 view xml
+ *
  */
 public class SettingsItemView extends RelativeLayout {
 
+    // 教程里是怎么写的:
     //private static final String NAMESPACE = "http://schemas.android.com/apk/res/com.example.agoodob.mobilesafe1c7";
+    // 下面这种写法是编辑器推荐的，而且也能用
     private static final String NAMESPACE = "http://schemas.android.com/apk/res-auto";
     private String mDescOn;
     private String mDescOff;

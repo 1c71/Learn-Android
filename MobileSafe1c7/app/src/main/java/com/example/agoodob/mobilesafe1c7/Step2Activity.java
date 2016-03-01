@@ -3,21 +3,38 @@ package com.example.agoodob.mobilesafe1c7;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 
-public class Step2Activity extends AppCompatActivity {
 
-    private GestureDetector gd;
+/**
+ * 2016-3-1 update
+ *
+ */
+public class Step2Activity extends BaseSetupActivity {
+
+    SettingsItemView settingItemView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step2);
+
         Button prev = (Button) findViewById(R.id.Step2Previous);
         Button next = (Button) findViewById(R.id.Step2Next);
+        settingItemView = (SettingsItemView) findViewById(R.id.settingItemView);
+
+        // 判断之前有没有存 SIM 信息，然后把钩打上，不然切换页面之后你会看到钩没了
+        String sim = mPref.getString("sim", null);
+        if (!TextUtils.isEmpty(sim)){
+            settingItemView.setChecked(true);
+        }
+
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,68 +48,45 @@ public class Step2Activity extends AppCompatActivity {
             }
         });
 
-
-        gd = new GestureDetector(this, new GestureDetector.OnGestureListener() {
-
+        settingItemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onDown(MotionEvent e) {
-                return false;
-            }
+            public void onClick(View v) {
+                if(settingItemView.isChecked()){
+                    settingItemView.setChecked(false);
 
-            @Override
-            public void onShowPress(MotionEvent e) {
+                    mPref.edit().remove("sim").apply();
 
-            }
+                } else {
+                    settingItemView.setChecked(true);
+                    // SIM 卡有序列号，保存并比对这个序列号即可
 
-            @Override
-            public boolean onSingleTapUp(MotionEvent e) {
-                return false;
-            }
+                    TelephonyManager tm = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+                    String simNumber = tm.getSimSerialNumber();
 
-            @Override
-            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-                return false;
-            }
+                    mPref.edit().putString("sim", simNumber).apply();
+                }
 
-            @Override
-            public void onLongPress(MotionEvent e) {
-
-            }
-
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                // e1 是滑动期间
-                // e2 是滑动重点
-                // vX 是水平速度
-                // vY 是垂直速度
-                return false;
             }
         });
 
     }
 
-
-    public void showPrevPage(){
-
-    }
-
-    public void next(){
-        Intent i = new Intent(Step2Activity.this, Step3Activity.class);
+    @Override
+    public void showNextPage() {
+        Intent i = new Intent(this, Step3Activity.class);
         startActivity(i);
         finish();
         // 两个界面切换的动画
         overridePendingTransition(R.anim.tran_in, R.anim.tran_out);
     }
 
-    public void prev(){
-        Intent i = new Intent(Step2Activity.this, Step1Activity.class);
+    @Override
+    public void showPrevPage(){
+        Intent i = new Intent(this, Step1Activity.class);
         startActivity(i);
         finish();
+        // 两个界面切换的动画
+        overridePendingTransition(R.anim.trans_prev_in, R.anim.trans_prev_out);
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent e){
-        gd.onTouchEvent(e); // 碰到手势事件就把这个事件交给我们自己写的手势识别器
-        return super.onTouchEvent(e);
-    }
 }
