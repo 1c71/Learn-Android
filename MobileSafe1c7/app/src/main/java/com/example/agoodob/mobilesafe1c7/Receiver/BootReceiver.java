@@ -1,4 +1,4 @@
-package com.example.agoodob.mobilesafe1c7;
+package com.example.agoodob.mobilesafe1c7.Receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

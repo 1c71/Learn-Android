@@ -26,6 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -322,6 +323,37 @@ public class SplashActivity extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
         finish();  // 干掉当前的 Activity, 这样 Back 的时候就不会回到这个页面
+    }
+
+    public void copyDB(){
+
+        //File fileDir = getFilesDir();
+        //System.out.println("路径: " + fileDir.getAbsolutePath());
+
+        File destFile = new File(getFilesDir(), "address.db"); // 目标地址
+
+
+        FileOutputStream out;
+        InputStream in;
+
+        try {
+            in = getAssets().open("address.db");
+            out = new FileOutputStream(destFile);
+
+            int len = 0;
+            byte[] buffer = new byte[1024];
+
+            while((len=in.read(buffer))  !=  -1){
+                out.write(buffer, 0, len);
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            in.close();
+            out.close();
+        }
     }
 
 }

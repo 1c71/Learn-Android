@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private String[] mItems = new String[]{"手机防盗", "流量监控", "清理加速", "软件管理",
-            "手机杀毒", "进程管理", "高级工具", "拦截骚扰", "设置中心"};
+            "手机杀毒", "进程管理", "拦截骚扰", "高级工具", "设置中心"};
 
     private int[] mPics = new int[]{R.drawable.icon_boat,
             R.drawable.icon_bus, R.drawable.icon_stamp,
@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
                         // 手机防盗
                         showPasswordDialog();
                         break;
+                    case 7:
+                        // 高级工具
+                        Intent a_i = new Intent(MainActivity.this, AdvanceToolActivity.class);
+                        startActivity(a_i);
+                        break;
                     case 8:
                         // 设置中心
                         Intent i = new Intent(MainActivity.this, SettingsActivity.class);
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void showPasswordDialog() {
         // 判断之前是否设置过密码, 设置过就不弹出了
-        String savePassword = mPrefs.getString("password", null);
+        String savePassword = mPrefs.getString("password", "");
         if(!TextUtils.isEmpty(savePassword)){
             // 输入密码弹窗
             showPasswordInputDialog();
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!TextUtils.isEmpty(pwd)){
 
-                    String storePassword = mPrefs.getString("password", null);
+                    String storePassword = mPrefs.getString("password", "");
 
                     if (pwd.equals(storePassword)){
                         Toast.makeText(MainActivity.this, "密码正确", Toast.LENGTH_SHORT).show();

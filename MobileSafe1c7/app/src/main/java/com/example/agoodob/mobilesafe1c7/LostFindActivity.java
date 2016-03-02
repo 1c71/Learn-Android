@@ -14,22 +14,27 @@ import android.widget.RelativeLayout;
  */
 public class LostFindActivity extends AppCompatActivity {
 
+    RelativeLayout rl_reset;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         SharedPreferences mPrefs = getSharedPreferences("config", MODE_PRIVATE);
         boolean configed = mPrefs.getBoolean("configed", false); // 判断是否进入过设置向导
+        setContentView(R.layout.activity_lost_find);
+
 
         if (configed){
-            setContentView(R.layout.activity_lost_find);
+
         } else {
             // 跳转到向导页面
             Intent i = new Intent(LostFindActivity.this, Step1Activity.class);
             startActivity(i);
         }
 
-        RelativeLayout rl_reset = (RelativeLayout) findViewById(R.id.rl_reset);
+        // 重新进入设置向导
+        rl_reset = (RelativeLayout) findViewById(R.id.rl_reset);
         rl_reset.setOnClickListener(new View.OnClickListener() {
 
             @Override

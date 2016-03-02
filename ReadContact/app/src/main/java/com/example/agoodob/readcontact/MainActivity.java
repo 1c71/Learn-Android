@@ -22,7 +22,8 @@ import com.example.agoodob.readcontact.R;
  *
  * 读取联系人整体流程:
  * 1 首先读取联系人需要权限
- * 2
+ * 2 写个函数去读联系人, 先以 HashMap 存，然后做个 ArrayList 存 HashMap
+ * 3 set list adapter
  *
  */
 public class MainActivity extends Activity {

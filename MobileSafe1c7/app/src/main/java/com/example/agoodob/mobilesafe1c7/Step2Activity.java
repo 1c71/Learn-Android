@@ -1,6 +1,8 @@
 package com.example.agoodob.mobilesafe1c7;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Shader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
@@ -19,6 +21,7 @@ import android.widget.Button;
 public class Step2Activity extends BaseSetupActivity {
 
     SettingsItemView settingItemView;
+    SharedPreferences mPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +31,9 @@ public class Step2Activity extends BaseSetupActivity {
         Button prev = (Button) findViewById(R.id.Step2Previous);
         Button next = (Button) findViewById(R.id.Step2Next);
         settingItemView = (SettingsItemView) findViewById(R.id.settingItemView);
-
+        mPref = getSharedPreferences("config", MODE_PRIVATE);
         // 判断之前有没有存 SIM 信息，然后把钩打上，不然切换页面之后你会看到钩没了
-        String sim = mPref.getString("sim", null);
+        String sim = mPref.getString("sim", "");
         if (!TextUtils.isEmpty(sim)){
             settingItemView.setChecked(true);
         }

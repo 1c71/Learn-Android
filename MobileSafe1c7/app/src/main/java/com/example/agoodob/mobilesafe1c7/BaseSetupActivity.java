@@ -23,7 +23,7 @@ import android.view.MotionEvent;
 public abstract class BaseSetupActivity extends Activity{
 
     private GestureDetector gd;
-    SharedPreferences mPref;
+    //SharedPreferences mPref = getSharedPreferences("config", MODE_PRIVATE);
 
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {

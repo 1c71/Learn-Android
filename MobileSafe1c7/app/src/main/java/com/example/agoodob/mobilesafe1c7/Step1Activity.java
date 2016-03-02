@@ -17,7 +17,9 @@ public class Step1Activity extends BaseSetupActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step1);
+
         Button step1 = (Button) findViewById(R.id.Step1);
+
         step1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

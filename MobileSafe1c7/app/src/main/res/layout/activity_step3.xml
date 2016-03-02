@@ -10,7 +10,8 @@
 
     <TextView
         style="@style/TitleStyle"
-        android:text="3. 设置报警号码"/>
+        android:text="3. 设置报警号码"
+        android:id="@+id/textView15"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -29,6 +30,26 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_phone"
+        android:layout_below="@+id/textView15"
+        android:layout_marginTop="46dp"
+        android:hint="手动输入"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择联系人"
+        android:id="@+id/chooseContact"
+        android:onClick="selectContact"
+        android:layout_below="@+id/et_phone"
+        android:layout_centerHorizontal="true"/>
+
 
 
 </RelativeLayout>
