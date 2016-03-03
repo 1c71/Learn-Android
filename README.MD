@@ -66,10 +66,19 @@ jar 和 compile
 
 
 <br>
-#### 10.
+#### 10. 震动
+```
+        Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
+        v.vibrate(2000);
+        // 震动2秒
 
+        v.vibrate(new long[]{1000, 2000, 1000, 3000}, -1);
+        // 前面的 long 数组代表震动的模式,  -1 表示只执行一次
+```
 
+权限:
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
 
 

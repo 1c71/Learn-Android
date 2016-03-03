@@ -10,6 +10,12 @@ import android.telephony.SmsMessage;
 import com.example.agoodob.mobilesafe1c7.R;
 import com.example.agoodob.mobilesafe1c7.Service.LocationService;
 
+
+/**
+ * 2016-3-2
+ * 短信广播接收器
+ * 手机卫士收到短信会需要播放报警声，定位，等等
+ */
 public class SMSReceiver extends BroadcastReceiver {
 
     @Override

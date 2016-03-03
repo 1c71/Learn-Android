@@ -33,8 +33,8 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
 
-    private String[] mItems = new String[]{"手机防盗", "流量监控", "清理加速", "软件管理",
-            "手机杀毒", "进程管理", "拦截骚扰", "高级工具", "设置中心"};
+    private String[] mItems = new String[]{"手机防盗", "流量监控", "清理加速",
+            "手机杀毒", "隐私保护", "进程管理", "软件管理", "高级工具", "设置中心"};
 
     private int[] mPics = new int[]{R.drawable.icon_boat,
             R.drawable.icon_bus, R.drawable.icon_stamp,
@@ -63,10 +63,25 @@ public class MainActivity extends AppCompatActivity {
                         // 手机防盗
                         showPasswordDialog();
                         break;
+                    case 4:
+                        // 隐私保护
+                        Intent pi = new Intent(MainActivity.this, PrivacyActivity.class);
+                        startActivity(pi);
+                        break;
+                    case 5:
+                        // 进程管理
+                        Intent ti = new Intent(MainActivity.this, TaskActivity.class);
+                        startActivity(ti);
+                        break;
+                    case 6:
+                        // 软件管理
+                        Intent si = new Intent(MainActivity.this, SoftwareManagerActivity.class);
+                        startActivity(si);
+                        break;
                     case 7:
                         // 高级工具
-                        Intent a_i = new Intent(MainActivity.this, AdvanceToolActivity.class);
-                        startActivity(a_i);
+                        Intent ai = new Intent(MainActivity.this, AdvanceToolActivity.class);
+                        startActivity(ai);
                         break;
                     case 8:
                         // 设置中心

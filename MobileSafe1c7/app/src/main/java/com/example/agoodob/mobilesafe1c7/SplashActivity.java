@@ -98,6 +98,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        copyDB("address.db");  // 复制归属地查询数据库
+
         SharedPreferences mPrefs = getSharedPreferences("config", MODE_PRIVATE);
         boolean checkUpdateSwitch = mPrefs.getBoolean("auto_update", false);
 
@@ -325,19 +327,29 @@ public class SplashActivity extends AppCompatActivity {
         finish();  // 干掉当前的 Activity, 这样 Back 的时候就不会回到这个页面
     }
 
-    public void copyDB(){
+    /**
+     * 复制数据库
+     * @param dbName
+     */
+    public void copyDB(String dbName){
 
-        //File fileDir = getFilesDir();
-        //System.out.println("路径: " + fileDir.getAbsolutePath());
+        File fileDir = getFilesDir();
+        System.out.println("路径: " + fileDir.getAbsolutePath());
 
-        File destFile = new File(getFilesDir(), "address.db"); // 目标地址
+        Toast.makeText(this, fileDir.getAbsolutePath(), Toast.LENGTH_LONG).show();
 
+        File destFile = new File(getFilesDir(), dbName); // 目标地址
 
-        FileOutputStream out;
-        InputStream in;
+        if (destFile.exists()){
+            Toast.makeText(this, "数据库已存在", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        FileOutputStream out = null;
+        InputStream in = null;
 
         try {
-            in = getAssets().open("address.db");
+            in = getAssets().open(dbName);
             out = new FileOutputStream(destFile);
 
             int len = 0;
@@ -347,12 +359,16 @@ public class SplashActivity extends AppCompatActivity {
                 out.write(buffer, 0, len);
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            in.close();
-            out.close();
+            try {
+                in.close();
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 

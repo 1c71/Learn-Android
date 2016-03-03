@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.agoodob.mobilesafe1c7.AddressActivity">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="归属地查询"
+        android:id="@+id/textView16"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入号码"
+        android:layout_below="@+id/textView16"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:layout_marginTop="46dp"
+        android:id="@+id/et_number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:layout_below="@+id/et_number"
+        android:layout_alignLeft="@+id/et_number"
+        android:layout_alignStart="@+id/et_number"
+        android:onClick="query"
+        android:id="@+id/button"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询结果"
+        android:id="@+id/tv_result"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:textAlignment="center"
+        android:textSize="24dp"/>
+
+</RelativeLayout>

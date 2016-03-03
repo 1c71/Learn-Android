@@ -10,4 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.agoodob.mobilesafe1c7.AdvanceToolActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="归属地查询"
+        android:id="@+id/button2"
+        android:onClick="numberAddressQuery"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"/>
 </RelativeLayout>
