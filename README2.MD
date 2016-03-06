@@ -220,13 +220,6 @@ FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 <br/>
 
 
-#### 学习资料来源
-
-    Treehouse 的安卓教程 (https://teamtreehouse.com)
-
-(一开始看的是 Udacity 的安卓教程，做的是个天气 APP，后来忘记因为什么原因实在跟不下去就放弃了)
-
-
 #### 环境
 
     Windows 10 x64
@@ -264,12 +257,23 @@ Ctrl+Q 看函数文档很重要
 
     README.IMAGE/               跟安卓无关, 只是 README 里需要用到的图片
 
+    太多懒得写了
 
 
 
 
+#### 学习资料来源
+
+    Treehouse 的安卓教程 (https://teamtreehouse.com)
+
+(一开始看的是 Udacity 的安卓教程，做的是个天气 APP，后来忘记因为什么原因实在跟不下去就放弃了)
 
 
+Udacity
+Treehouse
+老罗
+Mars
+黑马52期
 
 
 
