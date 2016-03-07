@@ -146,14 +146,51 @@ sm.sendTextMessage(phone, null, content, null, null);
 
 [配图版点这里]()
 
-Udacity Weather
-Treehouse Android
-黑马, 老罗, Mars
+Udacity: Weather
+Treehouse: Android Track
+黑马
+老罗
+Mars
 
 
 学完之后整理下 Evernote 再写这里
 
+<br/>
+#### 下拉刷新的做法
 
+前提知识:
+ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个视图.
+你可以自己写个布局文件然后 addHeaderView, 这个布局就到了列表头部了.
+
+
+下拉刷新做法:
+
+    1) 用 ListView 的 addHeaderView 在列表头部加个视图
+
+    2) 给 ListView 设置 负的 paddingTop 来隐藏列表头部的视图
+
+    3) 监听 onTouchEvent, 在这里面写:
+        1- 当手指摸到屏幕时保存 y 坐标
+        (在 MotionEvent.ACTION_DOWN 里写 )
+
+        2- 当手指移动的时候获得 y 坐标的改变值, 比如这人是不是按着屏幕向下拉了20个像素,
+        根据这个拉动距离改变 -paddingTop 的值, 从而将之前隐藏的视图显示出来.
+        (在 MotionEvent.ACTION_MOVE 里面写)
+
+        3- 当手指抬起屏幕之后, 根据拉动的距离, 判断是不是大于下拉刷新那块区域的高度.
+        以此判断是收回去, 无需刷新. 或者是需要刷新.
+        (在 MotionEvent.ACTION_UP 里面写)
+
+
+    [注意点]
+    可以做几个状态常量，来表示不同状态
+    (在 MotionEvent.ACTION_MOVE 里面根据拖动距离去修改状态)
+    松手时在 MotionEvent.ACTION_UP 根据状态做出响应
+    例子:
+
+    private final int PULL_REFRESH = 0; // 下拉刷新的状态
+    private final int RELEASH_REFRESH = 1; // 松开状态
+    private final int REFRESHING = 2;  // 刷新中
 
 
 <br/>
