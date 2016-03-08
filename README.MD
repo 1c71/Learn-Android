@@ -167,7 +167,8 @@ ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个�
 
     1) 用 ListView 的 addHeaderView 在列表头部加个视图
 
-    2) 给 ListView 设置 负的 paddingTop 来隐藏列表头部的视图
+    2) 给 headerView 设置 负的 paddingTop. 这样 headerView 就躲到 ListView 后面去了
+    headerView.setPadding(0, -headerViewHeight, 0, 0);
 
     3) 监听 onTouchEvent, 在这里面写:
         1- 当手指摸到屏幕时保存 y 坐标
@@ -191,6 +192,10 @@ ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个�
     private final int PULL_REFRESH = 0; // 下拉刷新的状态
     private final int RELEASH_REFRESH = 1; // 松开状态
     private final int REFRESHING = 2;  // 刷新中
+
+
+#### 关于模拟器
+Genymotion 这个安卓模拟器有免费版的，仅供个人使用，开发的可以下载下来用
 
 
 <br/>

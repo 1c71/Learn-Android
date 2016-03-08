@@ -1,6 +1,8 @@
 package com.example.agoodob.pull2fresh;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,13 +20,16 @@ import java.util.ArrayList;
 
 /**
  * 2016-3-7
- * 下拉刷新 - 黑马52期 - day54自定义控件第二天
+ * 下拉刷新              黑马52期 - day54自定义控件第二天, 5集视频讲下拉刷新, 60,22,25,30,29 分钟
  *
- * 整个核心点就是用 ListView 的 addHeaderView 做下拉刷新的提示
- * 以及 负的paddingTop 来隐藏下拉刷新的提示
- * 下拉时就改变这个 -paddingTop 的值
+ * 整个核心点是
+ * 用 ListView 的 addHeaderView 做下拉刷新的提示
+ * 以及 headerView 的 -paddingTop 来隐藏下拉刷新的提示
+ * 下拉时改变 -paddingTop 的值
  * 然后做几个状态常量，来表示不同状态。松手时根据状态做出响应
  *
+ * 2016-3-8 完成，samsung galaxy note5 测试没问题，只是动画效果不怎么好看
+ * setPadding 瞬间就上去了
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -32,10 +37,17 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> list = new ArrayList<String>();
     private MyAdapter adapter;
 
+    private Handler handle = new Handler(){
+        public void handleMessage(android.os.Message msg){
+            // 更新 UI
+            adapter.notifyDataSetChanged();
+            refreshListView.completeRefresh();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE); //只改当前 activity
         setContentView(R.layout.activity_main);
         initView();
         initData();
@@ -47,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
 
-        for(int i=0; i<=15; i++){
-            list.add("listView 原来的数据: "+i);
+        for(int i=0; i<=25; i++){
+            list.add("ListView 原来的数据: "+i);
         }
 
         // 这种做法是为了获得有效的高度，然后根据这个高度设置负边距
@@ -71,11 +83,50 @@ public class MainActivity extends AppCompatActivity {
 //        headerView.setPadding(0, -headerHeight, 0, 0);
 //        refreshListView.addHeaderView(headerView);
 
-
-
         adapter = new MyAdapter();
         refreshListView.setAdapter(adapter);
+        refreshListView.setOnRefreshListener(new MyFreshListener());
+    }
 
+    // 刷新监听器
+    class MyFreshListener implements RefreshListView.OnRefreshListener{
+        @Override
+        public void onPullRefresh() {
+            requestData(false);
+        }
+
+        @Override
+        public void onLoadingMore() {
+            requestData(true);
+        }
+    }
+
+    /**
+     * 从服务器请求数据(模拟)
+     * 上拉下拉都用这个方法
+     *
+     * @param isLoadingMore  false 代表是下拉(手指从上往下滑动, 试图去加载上方的数据), true 代表是上拉
+     */
+    private void requestData(final boolean isLoadingMore){
+        new Thread(){
+            @Override
+            public void run() {
+                SystemClock.sleep(2000);
+
+                if (isLoadingMore){
+                    list.add("上拉刷新的数据 1");
+                    list.add("上拉刷新的数据 2");
+                    list.add("上拉刷新的数据 3");
+                    list.add("上拉刷新的数据 4");
+                } else {
+                    list.add(0, "下拉刷新的数据 1");
+                    list.add(0, "下拉刷新的数据 2");
+                }
+
+                // 在 UI 线程更新 UI
+                handle.sendEmptyMessage(0);
+            }
+        }.start();
     }
 
     class MyAdapter extends BaseAdapter{
@@ -104,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             return tv;
             // 如果是 return null 会闪退，而且 android studio 不会提示
         }
-    }
 
+    }
 
 }
