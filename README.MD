@@ -194,6 +194,24 @@ ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个�
     private final int REFRESHING = 2;  // 刷新中
 
 
+
+
+
+<br/>
+#### 侧滑菜单的做法
+
+    1) 弄个 class extends ViewGroup
+
+    2) 弄个 view (比如layout/slide_menu.xml)
+        里面用 ScrollView
+
+
+
+
+
+
+
+<br/>
 #### 关于模拟器
 Genymotion 这个安卓模拟器有免费版的，仅供个人使用，开发的可以下载下来用
 
