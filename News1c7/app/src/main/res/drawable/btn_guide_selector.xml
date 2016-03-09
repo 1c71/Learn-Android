@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 正常的应该放最下面。如果顺序错了就不行了，不确定为什么，不应该这样才对-->
+    <item android:state_pressed="true" android:drawable="@drawable/button_red_pressed"/>
+    <item android:drawable="@drawable/button_red_normal"/>
+
+</selector>

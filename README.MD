@@ -204,10 +204,26 @@ ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个�
 
     2) 弄个 view (比如layout/slide_menu.xml)
         里面用 ScrollView
+没写完
 
 
+<br/>
+#### APP 载入页面怎么做? (比如微信的地球和人暗色图片)
+这种叫 Splash 页面,
+做法是用一个 Activity 做, 定时显示数秒, 然后跳到另一个 Activity
 
+<br/>
+#### 引导页面怎么做? (出现于第一次打开某APP, 然后可以左右滑动, 有的有些动画效果)
 
+1) ViewPager 可以做到左右滑动的效果
+
+2) 至于判断是否第一次打开, 就用 SharePreference
+
+3) 有时候你会看到圆点在页面下方，那个用 RelativeLayout 包一个 LinearLayout
+Linearlayout 里面放3个小灰点
+于Linearlayout 同级的地方放一个 view 标签做小红点
+
+监听 viewpager 的滑动事件，算出百分比
 
 
 
