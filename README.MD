@@ -247,3 +247,29 @@ Genymotion 这个安卓模拟器有免费版的，仅供个人使用，开发的
 
 <br/>
 #### 前端和安卓的异同点
+
+
+android 空间的 visibility
+gone
+invisibilty
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+第三方库安装方法(Android Studio):
+
+     方法1  build gradle 里去黏贴一行 complie xxxx，作者肯定会提供这个，你肯定不用写，复制粘贴就好
+     方法2 下载压缩包, 解压之后文件夹里会有个 .jar  扔到 app/libs 目录里即可, 记得右键  Add as Libary(在右键菜单下方那一块) 不然不行
+

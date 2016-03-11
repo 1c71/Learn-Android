@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\library\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
         "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_color_highlight_material.xml",
         "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
     }
