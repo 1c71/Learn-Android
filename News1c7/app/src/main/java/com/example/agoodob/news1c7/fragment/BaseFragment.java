@@ -1,16 +1,18 @@
 package com.example.agoodob.news1c7.fragment;
 
+
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 /**
-
+ * fragment基类
+ *
+ * @author Kevin
+ *
  */
 public abstract class BaseFragment extends Fragment {
 
@@ -42,8 +44,4 @@ public abstract class BaseFragment extends Fragment {
     public abstract View initViews();
 
     // 初始化数据, 可以不实现
-    public void initData() {
-
-    }
-
-}
+    public void initData(){}

@@ -7,13 +7,19 @@
     tools:context="com.example.agoodob.slidemenu.MainActivity">
 
     <com.example.agoodob.slidemenu.SlideMenu
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/slideMenu">
+
+        <!-- 主界面的布局 -->
+        <include layout="@layout/layout_main"/>
 
         <!-- 菜单界面的布局 -->
         <include layout="@layout/layout_menu"/>
-        <!-- 主界面的布局 -->
-        <include layout="@layout/layout_main"/>
+
+        <!--事实证明在后面的，会堆在上面，比如menu 会在main上面-->
+
+
 
     </com.example.agoodob.slidemenu.SlideMenu>
 

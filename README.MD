@@ -213,11 +213,24 @@ ListView 有一个方法叫做 addHeaderView, 就是在列表的头部加一个�
 <br/>
 #### 侧滑菜单的做法
 
-    1) 弄个 class extends ViewGroup
+    总体思路和 下拉刷新 一致，都是用负边距隐藏要滑动出来的内容
+    然后通过监听滑动事件来显示内容。
 
-    2) 弄个 view (比如layout/slide_menu.xml)
-        里面用 ScrollView
-没写完
+* 实现重点：
+ *  1 java: 做一个自定义控件(java class), 继承 ViewGroup   class slideMenu extend ViewGroup{}
+ *  2 xml: 做两个布局，一个是侧滑菜单，一个是主屏内容
+ *  3 xml: 把自定义控件包含2个布局
+ *  4 java: 写 onMeasure onLayout
+ *  5 java: 写自定义控件的 onTouchEvent, 响应滑动手势来打开和关闭侧滑菜单
+ *  6 没了
+
+
+
+#### 上方导航条
+
+
+
+#### 下方导航条
 
 
 <br/>

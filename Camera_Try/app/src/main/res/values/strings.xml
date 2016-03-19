@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Camera_Try</string>
+
+    <string name="aaa">
+        Customize the Animation with PageTransformer
+        To display a different animation from the default screen slide animation,
+        implement the ViewPager.PageTransformer interface and supply it to the view pager.
+        The interface exposes a single method, transformPage(). At each point in the screen\'s transition,
+        this method is called once for each visible page (generally there\'s only one visible page) \
+        and for adjacent pages just off the screen. For example, if page three is visible and the user
+        drags towards page four, transformPage() is called for pages two, three, and four at each step
+        of the gesture.
+        In your implementation of transformPage(), you can then create custom slide animations by
+        determining which pages need to be transformed based on the position of the page on the screen,
+        which is obtained from the position parameter of the transformPage() method.
+    </string>
+
+
+</resources>

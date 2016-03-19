@@ -1,179 +1,193 @@
-package com.example.agoodob.news1c7;
+package com.itheima.zhbj52;
+
+import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.example.agoodob.news1c7.utils.PrefTool;
-
-import java.util.ArrayList;
+import com.itheima.zhbj52.utils.PrefUtils;
 
 /**
- * 第一次打开 APP 看到的引导页
+ * 新手引导
+ * 
+ * @author Kevin
+ * 
  */
 public class GuideActivity extends Activity {
 
-    private static final int[] mImageId = new int[]{
-            R.drawable.guide_1,
-            R.drawable.guide_2,
-            R.drawable.guide_3
-    };
+	private static final int[] mImageIds = new int[] { R.drawable.guide_1,
+			R.drawable.guide_2, R.drawable.guide_3 };
 
-    private ViewPager vp_guide;
-    ArrayList<ImageView> mImageViewList;
-    private LinearLayout llPointGroup; // 放圆点的控件
-    int mPointDist;  // 圆点之间的距离
-    private View redPoint; // 红点
-    private Button btn_start; // 开始按钮
+	private ViewPager vpGuide;
+	private ArrayList<ImageView> mImageViewList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guide);
+	private LinearLayout llPointGroup;// 引导圆点的父控件
 
-        vp_guide = (ViewPager) findViewById(R.id.vp_guide);
-        llPointGroup = (LinearLayout) findViewById(R.id.point_group);
-        redPoint = findViewById(R.id.red_point);
-        btn_start = (Button) findViewById(R.id.btn_start);
-        btn_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PrefTool.setBoolean(GuideActivity.this, "guide_page", true);
-                startActivity(new Intent(GuideActivity.this, MainActivity.class));
-                finish();
-            }
-        });
+	private int mPointWidth;// 圆点间的距离
 
-        initView();
-        vp_guide.setAdapter(new GuideAdapter());
-        vp_guide.addOnPageChangeListener(new PageListener());
-    }
+	private View viewRedPoint;// 小红点
 
+	private Button btnStart;// 开始体验
 
-    private void initView(){
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        // 准备好数据，弄了三个 ImageView ，而且也设置好了
-        mImageViewList = new ArrayList<ImageView>();
+		requestWindowFeature(Window.FEATURE_NO_TITLE);// 去掉标题
+		setContentView(R.layout.activity_guide);
+		vpGuide = (ViewPager) findViewById(R.id.vp_guide);
+		llPointGroup = (LinearLayout) findViewById(R.id.ll_point_group);
+		viewRedPoint = findViewById(R.id.view_red_point);
+		btnStart = (Button) findViewById(R.id.btn_start);
 
-        for(int i=0; i<mImageId.length; i++){
-            ImageView v = new ImageView(this);
-            v.setBackgroundResource(mImageId[i]);
-            mImageViewList.add(v);
-        }
+		btnStart.setOnClickListener(new OnClickListener() {
 
-        // 初始化引导页的小圆点
-        for(int i=0; i<mImageId.length; i++){
-            View point = new View(this);
-            point.setBackgroundResource(R.drawable.shape_point_gray);
-            point.setLayoutParams(new LinearLayout.LayoutParams(100, 100)); // 设置圆点的大小
-            // 这里单位不能设置 dp，怪麻烦的，适配问题后面会说
+			@Override
+			public void onClick(View v) {
+				// 更新sp, 表示已经展示了新手引导
+				PrefUtils.setBoolean(GuideActivity.this,
+						"is_user_guide_showed", true);
 
-            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(20, 20);
-            if(i > 0){
-                param.leftMargin = 120; // 设置圆点间隔
-            }
-            point.setLayoutParams(param);
+				// 跳转主页面
+				startActivity(new Intent(GuideActivity.this, MainActivity.class));
+				finish();
+			}
+		});
 
-            llPointGroup.addView(point);
-        }
+		initViews();
+		vpGuide.setAdapter(new GuideAdapter());
 
+		vpGuide.setOnPageChangeListener(new GuidePageListener());
+	}
 
-        // 获取视图树, 对layout结束事件进行监听
-        // 这一段的主要目的是:  获得第2个点和第1个点之间的距离 mPointDist
-        llPointGroup.getViewTreeObserver().addOnGlobalLayoutListener(
-                new ViewTreeObserver.OnGlobalLayoutListener(){
+	/**
+	 * 初始化界面
+	 */
+	private void initViews() {
+		mImageViewList = new ArrayList<ImageView>();
 
-                    // 当layout执行结束后回调此方法
-                    @Override
-                    public void onGlobalLayout() {
-                        System.out.println("layout 结束");
-                        llPointGroup.getViewTreeObserver()
-                                .removeGlobalOnLayoutListener(this);
-                        mPointDist = llPointGroup.getChildAt(1).getLeft()
-                                - llPointGroup.getChildAt(0).getLeft();
-                        System.out.println("圆点距离:" + mPointDist);
-                    }
-                });
+		// 初始化引导页的3个页面
+		for (int i = 0; i < mImageIds.length; i++) {
+			ImageView image = new ImageView(this);
+			image.setBackgroundResource(mImageIds[i]);// 设置引导页背景
+			mImageViewList.add(image);
+		}
 
-    }
+		// 初始化引导页的小圆点
+		for (int i = 0; i < mImageIds.length; i++) {
+			View point = new View(this);
+			point.setBackgroundResource(R.drawable.shape_point_gray);// 设置引导页默认圆点
 
-    class GuideAdapter extends PagerAdapter{
+			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+					10, 10);
+			if (i > 0) {
+				params.leftMargin = 10;// 设置圆点间隔
+			}
 
-        @Override
-        public int getCount() {
-            return mImageId.length;
-        }
+			point.setLayoutParams(params);// 设置圆点的大小
 
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
+			llPointGroup.addView(point);// 将圆点添加给线性布局
+		}
 
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-//            return super.instantiateItem(container, position);
-            container.addView(mImageViewList.get(position));
-            return mImageViewList.get(position);
-        }
+		// 获取视图树, 对layout结束事件进行监听
+		llPointGroup.getViewTreeObserver().addOnGlobalLayoutListener(
+				new OnGlobalLayoutListener() {
 
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((View) object);
-        }
-    }
+					// 当layout执行结束后回调此方法
+					@Override
+					public void onGlobalLayout() {
+						System.out.println("layout 结束");
+						llPointGroup.getViewTreeObserver()
+								.removeGlobalOnLayoutListener(this);
+						mPointWidth = llPointGroup.getChildAt(1).getLeft()
+								- llPointGroup.getChildAt(0).getLeft();
+						System.out.println("圆点距离:" + mPointWidth);
+					}
+				});
+	}
 
-    /**
-     * 当滑动的时候，计算百分比，从而才能知道要移动圆点多少距离
-     */
-    class PageListener implements ViewPager.OnPageChangeListener{
+	/**
+	 * ViewPager数据适配器
+	 * 
+	 * @author Kevin
+	 * 
+	 */
+	class GuideAdapter extends PagerAdapter {
 
-        /**
-         * 当你滑动时 这个方法会被调用多次
-         * @param position
-         * @param positionOffset  移动百分比
-         * @param positionOffsetPixels  移动具体距离
-         */
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+		@Override
+		public int getCount() {
+			return mImageIds.length;
+		}
 
-            int len = (int) (mPointDist * positionOffset) + position * mPointDist;
-            System.out.println("position 是: " + position);
-            System.out.println("positionOffset 是: " + positionOffset);
-            System.out.println("positionOffsetPixels 是: " + positionOffsetPixels);
-            System.out.println("红点要移动的距离是: " + len);
+		@Override
+		public boolean isViewFromObject(View arg0, Object arg1) {
+			return arg0 == arg1;
+		}
 
-            RelativeLayout.LayoutParams para = (RelativeLayout.LayoutParams) redPoint.getLayoutParams();
-            // 获取当前红点的布局参数
+		@Override
+		public Object instantiateItem(ViewGroup container, int position) {
+			container.addView(mImageViewList.get(position));
+			return mImageViewList.get(position);
+		}
 
-            para.leftMargin = len; // 设置左边距
+		@Override
+		public void destroyItem(ViewGroup container, int position, Object object) {
+			container.removeView((View) object);
+		}
+	}
 
-            redPoint.setLayoutParams(para);
-        }
+	/**
+	 * viewpager的滑动监听
+	 * 
+	 * @author Kevin
+	 * 
+	 */
+	class GuidePageListener implements OnPageChangeListener {
 
-        @Override
-        public void onPageSelected(int position) {
-            if(position == mImageId.length - 1){ // 如果到了最后一个页面
-                btn_start.setVisibility(View.VISIBLE);
-            } else {
-                btn_start.setVisibility(View.INVISIBLE);
-            }
+		// 滑动事件
+		@Override
+		public void onPageScrolled(int position, float positionOffset,
+				int positionOffsetPixels) {
+			// System.out.println("当前位置:" + position + ";百分比:" + positionOffset
+			// + ";移动距离:" + positionOffsetPixels);
+			int len = (int) (mPointWidth * positionOffset) + position
+					* mPointWidth;
+			RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) viewRedPoint
+					.getLayoutParams();// 获取当前红点的布局参数
+			params.leftMargin = len;// 设置左边距
 
-        }
+			viewRedPoint.setLayoutParams(params);// 重新给小红点设置布局参数
+		}
 
-        @Override
-        public void onPageScrollStateChanged(int state) {
+		// 某个页面被选中
+		@Override
+		public void onPageSelected(int position) {
+			if (position == mImageIds.length - 1) {// 最后一个页面
+				btnStart.setVisibility(View.VISIBLE);// 显示开始体验的按钮
+			} else {
+				btnStart.setVisibility(View.INVISIBLE);
+			}
+		}
 
-        }
-    }
+		// 滑动状态发生变化
+		@Override
+		public void onPageScrollStateChanged(int state) {
+
+		}
+
+	}
+
 }

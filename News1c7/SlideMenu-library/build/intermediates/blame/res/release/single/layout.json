@@ -20,12 +20,12 @@
         "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\res\\merged\\release\\layout\\notification_template_lines.xml",
-        "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_lines.xml"
-    },
-    {
         "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\res\\merged\\release\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\News1c7\\SlideMenu-library\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_mode_bar.xml",

@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.agoodob.news1c7.MainActivity;
 import com.example.agoodob.news1c7.R;
+import com.example.agoodob.news1c7.base.impl.NewsCenterPager;
+import com.example.agoodob.news1c7.domain.NewsData;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
@@ -27,7 +29,7 @@ public class LeftMenuFragment extends BaseFragment {
 
 	@ViewInject(R.id.lv_list)
 	private ListView lvList;
-	private ArrayList<NewsMenuData> mMenuList;
+	private ArrayList<NewsData.NewsMenuData> mMenuList;
 
 	private int mCurrentPos;// 当前被点击的菜单项
 	private MenuAdapter mAdapter;
@@ -60,7 +62,7 @@ public class LeftMenuFragment extends BaseFragment {
 	/**
 	 * 切换SlidingMenu的状态
 	 * 
-	 * @param b
+	 *
 	 */
 	protected void toggleSlidingMenu() {
 		MainActivity mainUi = (MainActivity) mActivity;
