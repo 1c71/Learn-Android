@@ -1,7 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <!-- 一定要用这个主题，原书用的 android:Theme.Light 是不行的 -->
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
