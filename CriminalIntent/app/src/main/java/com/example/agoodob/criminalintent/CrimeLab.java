@@ -27,6 +27,7 @@ public class CrimeLab {
         mAppConext = appConext;
 
         try{
+            mSerializer = new CriminalIntentJSONSerializer(appConext, FILENAME);
             mCrimes = mSerializer.loadCrimes();
         } catch (Exception e) {
             mCrimes = new ArrayList<Crime>();

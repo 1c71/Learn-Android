@@ -264,17 +264,12 @@ Ctrl+Q 看函数文档很重要
 
 #### 学习资料来源
 
-    Treehouse 的安卓教程 (https://teamtreehouse.com)
-
-(一开始看的是 Udacity 的安卓教程，做的是个天气 APP，后来忘记因为什么原因实在跟不下去就放弃了)
-
-
-Udacity
-Treehouse
-老罗
-Mars
-黑马52期
-
+1 Udacity  - 看了几个视频就跟不下去了
+2 Treehouse - 看了两个新手入门系列
+3 老罗 - 看了部分
+4 Mars - 看了部分
+5 黑马52期 - 有很多没看完
+6 Android 编程权威指南 - GeoQuiz, CrimeIntent, HelloMoon
 
 
 

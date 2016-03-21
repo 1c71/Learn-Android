@@ -1,6 +1,7 @@
 package com.example.agoodob.criminalintent;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
  */
 public class CriminalIntentJSONSerializer {
 
+    private static final String TAG = "CriminalIntentJSON";
     private Context mContext;
     private String mFilename;
 
@@ -74,8 +76,8 @@ public class CriminalIntentJSONSerializer {
             for (int i = 0; i < array.length(); i++) {
                 crimes.add(new Crime(array.getJSONObject(i)));
             }
-        }catch (FileNotFoundException e){
-
+        } catch (FileNotFoundException e){
+            Log.e(TAG, "找不到文件");
         } finally {
             if (reader != null) {
                 reader.close();

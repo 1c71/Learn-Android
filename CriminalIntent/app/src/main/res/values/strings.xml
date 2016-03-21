@@ -13,4 +13,15 @@
     <string name="subtitle">If you see something, say something</string>
     <string name="delete_crime">Delete</string>
     <string name="take">Take</string>
+
+    <string name="crime_suspect_text">Choose Suspect</string>
+    <string name="crime_report_text">Send Crime Report</string>
+    <string name="crime_report">%1$s!
+        陋习发现时间 %2$s. %3$s, and %4$s</string>
+    <string name="crime_report_solved">已解决</string>
+    <string name="crime_report_unsolved">未解决</string>
+    <string name="crime_report_no_suspect">没有嫌疑人</string>
+    <string name="crime_report_suspect">嫌疑人是 %s</string>
+    <string name="crime_report_subject">CrimeIntent Crime Report</string>
+    <string name="send_report">发送陋习报告</string>
 </resources>

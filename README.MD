@@ -11,6 +11,14 @@
 
 
 
+ViewPager 只存在于 v4 包里。这个是用来左右切换的，然后除了简单的左右直接切换，还自带了一些效果
+
+FragmentManager
+FragmengTransation
+add
+commit
+findFragmentById
+
 ### 安卓重要概念极速入门
 (未完, 很乱还没整理)
 适合阅读人群: 任何对移动开发有一定兴趣的人
@@ -34,6 +42,8 @@
 res/
 layout/
 values/
+
+values/refs.xml
 
 生命周期的概念 onStart,
 
