@@ -1,8 +1,10 @@
 package com.example.agoodob.photogallery;
 
 import android.app.IntentService;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.net.ConnectivityManager;
 import android.util.Log;
 
 /**
@@ -18,6 +20,15 @@ public class PollService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean isNetworkAvailable = cm.getBackgroundDataSetting() &&
+                cm.getActiveNetworkInfo() != null;
+        if (!isNetworkAvailable) return;
+
         Log.i(TAG, "RECEIVED an intent: " + intent);
+
+
+
     }
 }

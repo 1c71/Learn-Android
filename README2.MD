@@ -49,10 +49,10 @@
 ### 4. 改进 Stormy  - 用列表显示天气数据
 课程名: Android Lists and Adapters
 
-<img src="README.IMAGE/41.jpg" width="218">
-<img src="README.IMAGE/42.jpg" width="218">
-<img src="README.IMAGE/43.jpg" width="218">
-<img src="README.IMAGE/44.jpg" width="218">
+<img src="README/41.jpg" width="218">
+<img src="README/42.jpg" width="218">
+<img src="README/43.jpg" width="218">
+<img src="README/44.jpg" width="218">
 
 
 讲了:
@@ -76,8 +76,8 @@
 ### 3. Stormy (天气信息)
 课程名: Build a Weather App
 
-<img src="README.IMAGE/31.jpg" width="293">
-<img src="README.IMAGE/32.jpg" width="293">
+<img src="README/31.jpg" width="293">
+<img src="README/32.jpg" width="293">
 
 讲了:
 
@@ -141,19 +141,19 @@
 课程名:《Build an Interactive Story App》  <br/>
 
 官方设计稿: <br/>
-<img src="README.IMAGE/interactive_story_mockups.png">
+<img src="README/interactive_story_mockups.png">
 
 玩法是一开始让你输入一个名字, 然后进入一个故事, 每个故事有2个按钮, 然后进到不同的故事 <br/>
 真机测试的截图(我汉化了下)<br/>
-<img src="README.IMAGE/21.jpg" width="174">
-<img src="README.IMAGE/22.jpg" width="174">
-<img src="README.IMAGE/23.jpg" width="174">
-<img src="README.IMAGE/24.jpg" width="174">
-<img src="README.IMAGE/25.jpg" width="174">
-<img src="README.IMAGE/26.jpg" width="174">
-<img src="README.IMAGE/27.jpg" width="174">
-<img src="README.IMAGE/28.jpg" width="174">
-<img src="README.IMAGE/29.jpg" width="174">
+<img src="README/21.jpg" width="174">
+<img src="README/22.jpg" width="174">
+<img src="README/23.jpg" width="174">
+<img src="README/24.jpg" width="174">
+<img src="README/25.jpg" width="174">
+<img src="README/26.jpg" width="174">
+<img src="README/27.jpg" width="174">
+<img src="README/28.jpg" width="174">
+<img src="README/29.jpg" width="174">
 
 
 这个课是第 2 篇, 用了 2 个 Activity  <br/>
@@ -177,11 +177,11 @@
 课程名: 《Build a Simple Android App》<br/>
 FunFacts/ 是 TreeHouse Android 系列教程的第 1 篇<br/>
 点击按钮，切换不同的有趣的冷知识.<br/>
-<img src="README.IMAGE/1.jpg" width="174">
-<img src="README.IMAGE/2.jpg" width="174">
-<img src="README.IMAGE/3.jpg" width="174">
-<img src="README.IMAGE/4.jpg" width="174">
-<img src="README.IMAGE/5.jpg" width="174">
+<img src="README/1.jpg" width="174">
+<img src="README/2.jpg" width="174">
+<img src="README/3.jpg" width="174">
+<img src="README/4.jpg" width="174">
+<img src="README/5.jpg" width="174">
 
 讲了:
 
@@ -255,7 +255,7 @@ Ctrl+Q 看函数文档很重要
 
     StormyList/           今日天气 + 今天的每小时天气(列表) + 本周每天的天气(列表)
 
-    README.IMAGE/               跟安卓无关, 只是 README 里需要用到的图片
+    README/               跟安卓无关, 只是 README 里需要用到的图片
 
     太多懒得写了
 
@@ -270,6 +270,6 @@ Ctrl+Q 看函数文档很重要
 4 Mars - 看了部分
 5 黑马52期 - 有很多没看完
 6 Android 编程权威指南 - GeoQuiz, CrimeIntent, HelloMoon
-
+7 Udacity NanoDegree
 
 

@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 
 /**
- *  2016-3-22
+ *  2016-3-22, 3-23
  *  Android编程权威指南 - 第26章 HTTP与后台任务
  *
  *  项目6
