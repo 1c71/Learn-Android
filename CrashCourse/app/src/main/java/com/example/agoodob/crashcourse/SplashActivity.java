@@ -13,10 +13,10 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
 
+
+
 public class SplashActivity extends Activity {
-
-
-    private static int SPLASH_TIME_OUT = 4000;
+    private static int SPLASH_TIME_OUT = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,7 @@ public class SplashActivity extends Activity {
         AnimationSet animationSet = new AnimationSet(false);
 
         // 缩放
-        ScaleAnimation scale = new ScaleAnimation(1.4f, 1, 1.4f, 1,
-//        ScaleAnimation scale = new ScaleAnimation(0.8f, 1.2f, 0.8f, 1.2f,
+        ScaleAnimation scale = new ScaleAnimation(1.2f, 1, 1.2f, 1,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
         scale.setDuration(SPLASH_TIME_OUT);
