@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".SlidingExample">
         </activity>
+        <activity android:name=".SeriesActivity">
+        </activity>
     </application>
 
 </manifest>
