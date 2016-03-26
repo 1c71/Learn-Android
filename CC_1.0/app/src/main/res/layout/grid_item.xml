@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/series"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="教育经济学"
+        android:id="@+id/titleTextView"
+        android:padding="5dp"/>
+
+</LinearLayout>
