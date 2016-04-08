@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\CrashCourse\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
         "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\CrashCourse\\SlidingMenu\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\bad.CrashCourse\\SlidingMenu\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
+        "source": "C:\\Users\\agoodob\\Desktop\\Learn-Android\\bad.CrashCourse\\SlidingMenu\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
     }
 ]

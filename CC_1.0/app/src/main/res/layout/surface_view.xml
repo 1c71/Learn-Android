@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+              android:orientation="vertical"
+                tools:context=".MainActivity" >
+
+    <SurfaceView
+        android:id="@+id/surfView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+<!--    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:id="@+id/stop"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:id="@+id/start"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+    </LinearLayout>
+
+    <!-- 大的进度条, 可以拖动的那个. -->
+    <View
+        android:id="@+id/bigProcess"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#bb000000"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/process">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#99dddddd"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/view"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="#000000"
+            android:id="@+id/smallProcess"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="00:00"
+            android:id="@+id/currentTime"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="13dp"
+            android:layout_above="@+id/view"
+            android:textColor="#eeffffff"
+            android:layout_toLeftOf="@+id/sperateTime"
+            android:layout_toStartOf="@+id/sperateTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="10:00"
+            android:textColor="#eeffffff"
+            android:id="@+id/endTime"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_above="@+id/view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="/"
+            android:id="@+id/sperateTime"
+            android:textColor="#eeffffff"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="13dp"
+            android:layout_above="@+id/view"
+            android:layout_toLeftOf="@+id/endTime"
+            android:layout_toStartOf="@+id/endTime"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playStop"
+            android:layout_above="@+id/view"
+            android:src="@drawable/ic_pause_white_36dp"
+            android:background="@null"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="13dp"
+            android:paddingBottom="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="13dp"
+            android:layout_marginBottom="-3dp"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

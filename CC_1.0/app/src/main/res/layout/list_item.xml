@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
                 android:background="#ffffff"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_width="370dp"
+              android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal">
 
     <ImageView
         android:layout_width="160dp"
@@ -11,46 +13,53 @@
         android:id="@+id/imageView"
         android:src="@drawable/mqdefault"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="教育经济学"
-        android:id="@+id/titleTextView"
-        android:layout_marginLeft="59dp"
-        android:layout_marginStart="59dp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginBottom="30dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="经济学"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="第23集"
-        android:id="@+id/episodeTextView"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/titleTextView"
-        android:layout_alignStart="@+id/titleTextView"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="\@鸾爷"
-        android:id="@+id/authorTextView"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingLeft="10dp">
 
 
-</RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="经济学"
+                android:id="@+id/textView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="第23集"
+                android:paddingLeft="6dp"
+                android:id="@+id/episodeTextView"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_marginTop="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="教育经济学"
+                android:textColor="#333"
+                android:id="@+id/titleTextView"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

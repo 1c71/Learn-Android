@@ -216,13 +216,11 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Toast.makeText(getActivity(), "asd", Toast.LENGTH_SHORT).show();
-
-//                        Intent i = new Intent(getActivity(), SlidingExample.class);
+//                        Toast.makeText(getActivity(), "asd", Toast.LENGTH_SHORT).show();
+                        //                        Intent i = new Intent(getActivity(), SlidingExample.class);
 //                Intent i = new Intent(MainActivity.this, WebViewActivity.class);
-//                Intent i = new Intent(MainActivity.this, VideoActivity.class);
-//                        startActivity(i);
-
+                        Intent i = new Intent(getActivity(), VideoActivity.class);
+                        startActivity(i);
                     }
                 });
                 return rootView;
